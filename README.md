@@ -1,42 +1,29 @@
+
 # Finance AI SaaS
 
-## Quick Start
+Automated Financial Data Extraction engine powered by Claude Opus 4.6 and Gemini 1.5 Pro.
 
-### Prerequisites
-- Node.js 18+
-- Python 3.11+
-- Docker (optional, recommended)
+## Deployment to Google Cloud Run
 
-### Option 1: Docker (Recommended)
-1. Copy `.env.example` to `.env` and fill in API keys.
-2. Run:
-   ```bash
-   docker-compose up --build
-   ```
-3. Access Frontend at `http://localhost:3000` and Backend at `http://localhost:8000`.
+**Prerequisites:**
+1.  Verify Google Cloud SDK is installed: `gcloud --version`
+2.  Login: `gcloud auth login`
+3.  Set Project: `gcloud config set project YOUR_PROJECT_ID`
 
-### Option 2: Manual Setup
+**Deploy:**
+Run the deployment script from the project root (PowerShell):
+```powershell
+./deploy_cloud_run.ps1
+```
 
-#### Frontend
-1. Navigate to `frontend/`:
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
-2. Access at `http://localhost:3000`.
+This script will:
+1.  Enable required GCP services (Cloud Build, Cloud Run).
+2.  Build Docker images for Backend and Frontend.
+3.  Push images to Google Container Registry (GCR).
+4.  Deploy services to Cloud Run (fully managed).
+5.  Link the services (Backend knows Frontend URL, Frontend knows Backend URL).
 
-#### Backend
-1. Navigate to `backend/`:
-   ```bash
-   cd backend
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   uvicorn main:app --reload --host 0.0.0.0 --port 8000
-   ```
-2. Access API docs at `http://localhost:8000/docs`.
-
-## Troubleshooting
-- If Docker is not found, use Option 2.
-- Ensure PostgreSQL and Redis are running for full backend functionality.
+**Manual Build (if script fails):**
+```bash
+gcloud builds submit --config cloudbuild.yaml .
+```
