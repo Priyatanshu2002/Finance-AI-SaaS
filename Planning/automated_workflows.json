@@ -1,0 +1,602 @@
+{
+    "metadata": {
+        "title": "Automated Workflows for Top 5 Most Profitable Finance AI SaaS Ideas",
+        "description": "End-to-end automated workflow definitions for the highest-scoring problem statements, designed for AI-native product implementation.",
+        "generated_date": "2026-02-11",
+        "selection_criteria": "Profitability Score ≥ 9, ranked by TAM × pain intensity × competitive gap",
+        "source_file": "finance_domain_problem_statements.json"
+    },
+    "profitability_analysis": {
+        "top_5_selection": [
+            {
+                "rank": 1,
+                "id": "PS-004",
+                "title": "M&A Due Diligence Automation",
+                "profitability_score": 10,
+                "tam": "$4.1B",
+                "time_saved_per_instance": "500-2,000+ person-hours",
+                "monetization_ceiling": "$250K-$1M/year",
+                "competitive_moat": "End-to-end DD workflow (not just doc search or VDR)",
+                "why_most_profitable": "Highest TAM, highest pain intensity, highest per-deal value. Existing competitors only solve fragments — no one owns the full DD workflow."
+            },
+            {
+                "rank": 2,
+                "id": "PS-009",
+                "title": "Project Finance Modeling Platform",
+                "profitability_score": 9,
+                "tam": "$800M+ (severely underserved)",
+                "time_saved_per_instance": "200-500+ hours",
+                "monetization_ceiling": "$100K-$500K/year",
+                "competitive_moat": "No real SaaS competitors exist. Domain complexity = high barrier to entry.",
+                "why_most_profitable": "Greenfield market — zero dominant SaaS player. Infrastructure spending boom (data centers, renewables, PPPs) creates massive demand tailwinds. Complexity = willingness to pay premium."
+            },
+            {
+                "rank": 3,
+                "id": "PS-001",
+                "title": "CIM Creation Automation",
+                "profitability_score": 9,
+                "tam": "$2.5B+",
+                "time_saved_per_instance": "80-240 hours",
+                "monetization_ceiling": "$50K-$200K/year",
+                "competitive_moat": "End-to-end CIM pipeline vs. point solutions",
+                "why_most_profitable": "Direct revenue-generation impact for IB teams. Clear before/after ROI story. Existing competitors are narrow (CIM-only) or not AI-native."
+            },
+            {
+                "rank": 4,
+                "id": "PS-007",
+                "title": "CRE Underwriting Automation",
+                "profitability_score": 9,
+                "tam": "$1.8B",
+                "time_saved_per_instance": "20-60 hours",
+                "monetization_ceiling": "$20K-$100K/year",
+                "competitive_moat": "AI rent-roll extraction + auto pro forma — no one does both",
+                "why_most_profitable": "High deal volume with low close rate (50-200 underwritten to close 5-10) means massive cumulative time waste. Clear product-market fit for mid-market CRE firms."
+            },
+            {
+                "rank": 5,
+                "id": "PS-020",
+                "title": "Universal Financial Data Extraction Engine",
+                "profitability_score": 9,
+                "tam": "$1.2B",
+                "time_saved_per_instance": "2-8 hours per statement",
+                "monetization_ceiling": "$1K-$10K/month API",
+                "competitive_moat": "Private company + any-format coverage (not just XBRL/public)",
+                "why_most_profitable": "Universal bottleneck across ALL finance verticals. API-first monetization scales infinitely. Can be the 'plumbing layer' powering the other 4 products."
+            }
+        ],
+        "strategic_insight": "PS-020 (Financial Data Extraction) is the infrastructure layer that powers PS-001, PS-004, PS-007, and PS-009. Building it first creates a platform advantage where each subsequent product is faster to ship."
+    },
+    "automated_workflows": {
+        "WF-001": {
+            "source_problem": "PS-004",
+            "workflow_name": "AI-Powered M&A Due Diligence Pipeline",
+            "workflow_type": "Document Intelligence → Risk Analysis → Report Generation",
+            "trigger": "Data room URL/access credentials provided by deal team",
+            "estimated_automation_rate": "70-85% of manual DD tasks",
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Data Room Ingestion & Classification",
+                    "description": "Automatically crawl VDR, download all documents, classify by DD category",
+                    "inputs": ["VDR access credentials", "Deal type (asset/share purchase)", "DD scope checklist"],
+                    "ai_tasks": [
+                        "OCR and text extraction from all document formats (PDF, DOCX, XLSX, images)",
+                        "Document classification using fine-tuned classifier (Legal, Financial, Tax, HR, IP, Environmental, etc.)",
+                        "Duplicate detection and version tracking",
+                        "Completeness assessment against standard DD checklist",
+                        "Gap identification — flag missing document categories"
+                    ],
+                    "outputs": ["Classified document index", "Completeness scorecard", "Missing document report"],
+                    "technology_stack": ["Document AI / Layout LM", "Custom classification model", "Vector embeddings for dedup"]
+                },
+                {
+                    "stage": 2,
+                    "name": "Financial Data Extraction & Spreading",
+                    "description": "Extract structured financial data from all financial documents",
+                    "inputs": ["Classified financial documents from Stage 1"],
+                    "ai_tasks": [
+                        "Extract income statement, balance sheet, cash flow data from PDF financials",
+                        "Normalize across different reporting standards (GAAP, IFRS, local GAAP)",
+                        "Identify non-recurring items and one-time adjustments",
+                        "Build historical financial database (3-5 years)",
+                        "Calculate key financial metrics and ratios automatically",
+                        "Quality of earnings (QoE) initial analysis"
+                    ],
+                    "outputs": ["Structured financial database", "Normalized financial model", "QoE preliminary report"],
+                    "technology_stack": ["Table extraction AI", "Financial NER model", "Normalization rules engine"]
+                },
+                {
+                    "stage": 3,
+                    "name": "Contract & Legal Analysis",
+                    "description": "Extract key terms, obligations, and risks from legal documents",
+                    "inputs": ["Classified legal documents from Stage 1"],
+                    "ai_tasks": [
+                        "Extract key clauses from all contracts (term, termination, change of control, exclusivity, non-compete)",
+                        "Identify material contracts vs. standard agreements",
+                        "Flag unusual or non-market terms",
+                        "Map customer/supplier concentration from contract data",
+                        "Analyze litigation exposure from legal filings",
+                        "Identify regulatory compliance gaps"
+                    ],
+                    "outputs": ["Contract summary matrix", "Risk register", "Concentration analysis"],
+                    "technology_stack": ["Legal NLP model", "Clause extraction pipeline", "Risk scoring model"]
+                },
+                {
+                    "stage": 4,
+                    "name": "Cross-Reference & Anomaly Detection",
+                    "description": "Cross-validate findings across document types and flag inconsistencies",
+                    "inputs": ["All extracted data from Stages 2-3"],
+                    "ai_tasks": [
+                        "Cross-reference financial data with contract terms (revenue vs. customer contracts)",
+                        "Identify discrepancies between management representations and documentation",
+                        "Flag material changes between periods",
+                        "Detect potential liabilities not disclosed in financials",
+                        "Calculate adjusted EBITDA with AI-suggested adjustments",
+                        "Risk-weight findings by materiality"
+                    ],
+                    "outputs": ["Anomaly report", "Adjusted EBITDA bridge", "Risk-weighted findings matrix"],
+                    "technology_stack": ["Cross-referencing engine", "Anomaly detection ML", "Materiality scoring"]
+                },
+                {
+                    "stage": 5,
+                    "name": "DD Report Generation",
+                    "description": "Generate structured due diligence report with findings, risks, and recommendations",
+                    "inputs": ["All extracted data and analyses from Stages 1-4", "Report template", "Deal context"],
+                    "ai_tasks": [
+                        "Generate executive summary with key findings",
+                        "Create section-by-section DD report (Financial, Legal, Tax, HR, IT, Environmental)",
+                        "Produce risk heat map visualization",
+                        "Generate deal-breaker alerts for critical findings",
+                        "Create appendices with supporting data tables",
+                        "Format to client's brand template"
+                    ],
+                    "outputs": ["Complete DD report (50-200 pages)", "Risk heat map", "Executive summary deck", "Supporting data appendices"],
+                    "technology_stack": ["LLM report generation", "Template engine", "Data visualization"]
+                }
+            ],
+            "human_review_checkpoints": [
+                "Post Stage 1: Validate document classification accuracy",
+                "Post Stage 2: Review financial spreading and QoE assumptions",
+                "Post Stage 4: Confirm anomaly significance and materiality thresholds",
+                "Post Stage 5: Final report review and sign-off"
+            ],
+            "kpis": {
+                "time_reduction": "60-75% (from 500-2,000 hrs to 150-500 hrs)",
+                "accuracy_target": "95%+ extraction accuracy, 90%+ risk identification recall",
+                "revenue_per_deal": "$25,000 - $100,000"
+            }
+        },
+        "WF-002": {
+            "source_problem": "PS-009",
+            "workflow_name": "AI Project Finance Model Builder",
+            "workflow_type": "Data Ingestion → Model Construction → Scenario Analysis → Lender Reporting",
+            "trigger": "Project term sheet or information memorandum uploaded",
+            "estimated_automation_rate": "60-75% of model building tasks",
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Project Data Extraction & Structuring",
+                    "description": "Extract project parameters from term sheets, IMs, and contracts",
+                    "inputs": ["Project information memorandum", "Term sheet", "Concession agreement", "EPC contract", "PPA/offtake agreement"],
+                    "ai_tasks": [
+                        "Extract project type (renewable energy, transport, social infrastructure, data center)",
+                        "Identify key financial parameters (construction cost, debt/equity split, tenor, interest rates)",
+                        "Parse tariff/revenue structure from concession/PPA documents",
+                        "Extract construction timeline and milestone schedule",
+                        "Identify currency exposures from multi-currency contracts",
+                        "Map regulatory/permitting requirements"
+                    ],
+                    "outputs": ["Structured project data sheet", "Parameter validation report", "Assumption register"],
+                    "technology_stack": ["Document AI", "Domain-specific NER for project finance", "Parameter extraction pipeline"]
+                },
+                {
+                    "stage": 2,
+                    "name": "Automated Model Construction",
+                    "description": "Build project finance model framework from extracted parameters",
+                    "inputs": ["Structured project data from Stage 1", "Model template library"],
+                    "ai_tasks": [
+                        "Select appropriate base model template by project type",
+                        "Auto-populate construction cost budget and drawdown schedule",
+                        "Build revenue model based on tariff/PPA structure",
+                        "Construct operating expense model with escalation assumptions",
+                        "Build debt sculpting engine matching cash flow profile to DSCR targets",
+                        "Handle circular references (interest ↔ cash flow) programmatically",
+                        "Build tax model with jurisdiction-specific rules",
+                        "Create multi-currency cashflow consolidation"
+                    ],
+                    "outputs": ["Complete project finance model", "Construction phase cashflows", "Operating phase cashflows", "Debt repayment schedule"],
+                    "technology_stack": ["Model construction engine", "Debt sculpting algorithm", "Circular reference solver", "Currency engine"]
+                },
+                {
+                    "stage": 3,
+                    "name": "Scenario & Sensitivity Analysis",
+                    "description": "Run automated scenario analyses and sensitivity tables",
+                    "inputs": ["Complete model from Stage 2", "Scenario parameters"],
+                    "ai_tasks": [
+                        "Run base case, upside, downside, and bankable case scenarios",
+                        "Generate sensitivity tables (DSCR, IRR, LLCR vs. key variables)",
+                        "Perform Monte Carlo simulation on key risk variables",
+                        "Calculate breakeven analysis on critical assumptions",
+                        "Stress test for construction delay, cost overrun, revenue shortfall",
+                        "Generate tornado charts showing sensitivity ranking"
+                    ],
+                    "outputs": ["Scenario comparison dashboard", "Sensitivity tables", "Monte Carlo distribution charts", "Stress test results"],
+                    "technology_stack": ["Scenario engine", "Monte Carlo simulation", "Visualization library"]
+                },
+                {
+                    "stage": 4,
+                    "name": "Lender Presentation & Reporting",
+                    "description": "Generate lender-ready outputs and presentations",
+                    "inputs": ["Model outputs from Stages 2-3"],
+                    "ai_tasks": [
+                        "Generate financial model summary pack",
+                        "Create lender presentation with key metrics (DSCR, LLCR, PLCR, equity IRR)",
+                        "Build model audit trail documenting all assumptions",
+                        "Generate covenant compliance tracker",
+                        "Create term sheet comparison matrix (if multiple lender proposals)",
+                        "Auto-format to lender/sponsor brand standards"
+                    ],
+                    "outputs": ["Lender presentation deck", "Model summary pack", "Audit trail document", "Covenant tracker"],
+                    "technology_stack": ["Report generation engine", "Presentation builder", "Audit trail system"]
+                }
+            ],
+            "human_review_checkpoints": [
+                "Post Stage 1: Validate extracted parameters against source documents",
+                "Post Stage 2: Review model logic, debt sculpting, and key assumptions",
+                "Post Stage 3: Review scenario ranges and stress test parameters",
+                "Post Stage 4: Final model sign-off before lender distribution"
+            ],
+            "kpis": {
+                "time_reduction": "50-65% (from 200-500 hrs to 70-175 hrs)",
+                "accuracy_target": "99%+ calculation accuracy, 0 circular reference errors",
+                "revenue_per_project": "$20,000 - $50,000"
+            }
+        },
+        "WF-003": {
+            "source_problem": "PS-001",
+            "workflow_name": "AI CIM Generation Engine",
+            "workflow_type": "Data Gathering → Content Synthesis → Document Generation → Brand Formatting",
+            "trigger": "New sell-side mandate engagement letter signed",
+            "estimated_automation_rate": "65-80% of CIM creation tasks",
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Multi-Source Data Ingestion",
+                    "description": "Automatically gather and organize all source data for CIM creation",
+                    "inputs": ["Client data room access", "Management presentations", "Historical financials", "Industry sector"],
+                    "ai_tasks": [
+                        "Crawl and index client data room contents",
+                        "Extract financial data from statements and reports",
+                        "Pull public company data from SEC filings (if applicable)",
+                        "Scrape market data, industry reports, and competitor information from APIs",
+                        "Extract key business information from management presentations",
+                        "Organize visual assets (logos, product images, facility photos)"
+                    ],
+                    "outputs": ["Organized source data library", "Financial data spreadsheet", "Market/competitor research dossier"],
+                    "technology_stack": ["Data room crawler", "Financial extraction AI", "Market data APIs", "Asset organizer"]
+                },
+                {
+                    "stage": 2,
+                    "name": "Content Synthesis & Draft Generation",
+                    "description": "Generate first draft of all CIM sections",
+                    "inputs": ["Organized source data from Stage 1", "CIM template", "Deal-specific instructions"],
+                    "ai_tasks": [
+                        "Generate executive summary with investment highlights",
+                        "Draft company overview (history, products, operations)",
+                        "Synthesize industry overview and market dynamics section",
+                        "Create growth strategy and opportunity narrative",
+                        "Build financial summary with historical/projected tables",
+                        "Draft management team bios and organizational overview",
+                        "Generate risk factors section",
+                        "Create transaction summary and process timeline"
+                    ],
+                    "outputs": ["Complete CIM first draft (40-80 pages)", "Section-by-section source citations"],
+                    "technology_stack": ["LLM content generation", "Financial narrative AI", "Citation tracking"]
+                },
+                {
+                    "stage": 3,
+                    "name": "Financial Spreading & Visualization",
+                    "description": "Build financial exhibits and charts for the CIM",
+                    "inputs": ["Extracted financial data from Stage 1"],
+                    "ai_tasks": [
+                        "Build formatted financial summary tables (P&L, BS, CF)",
+                        "Generate financial charts (revenue growth, margin trends, EBITDA bridge)",
+                        "Create customer/revenue concentration analysis visuals",
+                        "Build peer benchmarking charts",
+                        "Generate market size and growth visualizations",
+                        "Format all exhibits to bank brand standards"
+                    ],
+                    "outputs": ["Financial exhibit package", "Market charts", "Benchmarking charts"],
+                    "technology_stack": ["Chart generation engine", "Financial formatting AI", "Brand template system"]
+                },
+                {
+                    "stage": 4,
+                    "name": "Brand Formatting & Assembly",
+                    "description": "Apply bank branding and assemble final CIM document",
+                    "inputs": ["Draft content from Stage 2", "Financial exhibits from Stage 3", "Bank brand template"],
+                    "ai_tasks": [
+                        "Apply bank's brand template (fonts, colors, headers, footers)",
+                        "Position visual assets and charts within document flow",
+                        "Generate table of contents and page numbers",
+                        "Apply consistent formatting across all sections",
+                        "Create PDF and Word versions",
+                        "Generate version tracking metadata"
+                    ],
+                    "outputs": ["Brand-formatted CIM (PDF + DOCX)", "Version-tracked document"],
+                    "technology_stack": ["Document assembly engine", "Brand compliance checker", "PDF generator"]
+                },
+                {
+                    "stage": 5,
+                    "name": "Review Tracking & Iteration",
+                    "description": "Manage review workflow and implement revisions",
+                    "inputs": ["Draft CIM from Stage 4", "Reviewer comments"],
+                    "ai_tasks": [
+                        "Track reviewer comments and suggested changes",
+                        "Auto-implement formatting-only changes",
+                        "Flag substantive changes for human review",
+                        "Maintain revision history and comparison views",
+                        "Generate change summary between versions",
+                        "Re-apply brand formatting after content changes"
+                    ],
+                    "outputs": ["Finalized CIM", "Revision history", "Change log"],
+                    "technology_stack": ["Document diff engine", "Comment tracking", "Auto-reformat pipeline"]
+                }
+            ],
+            "human_review_checkpoints": [
+                "Post Stage 1: Validate data completeness and accuracy",
+                "Post Stage 2: Review narrative quality and investment thesis framing",
+                "Post Stage 3: Verify financial exhibit accuracy",
+                "Post Stage 5: Final MD sign-off"
+            ],
+            "kpis": {
+                "time_reduction": "60-75% (from 80-240 hrs to 20-60 hrs)",
+                "accuracy_target": "98%+ data accuracy, 95%+ brand compliance",
+                "revenue_per_cim": "$5,000 - $15,000"
+            }
+        },
+        "WF-004": {
+            "source_problem": "PS-007",
+            "workflow_name": "AI CRE Underwriting Accelerator",
+            "workflow_type": "Document Extraction → Pro Forma Build → Scenario Analysis → Investment Memo",
+            "trigger": "Offering Memorandum / Rent Roll PDF uploaded",
+            "estimated_automation_rate": "70-85% of underwriting tasks",
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "OM & Rent Roll Extraction",
+                    "description": "Extract structured data from offering memorandum and rent roll PDFs",
+                    "inputs": ["Offering Memorandum PDF", "Rent Roll (PDF, Excel, or CSV)", "Property type classification"],
+                    "ai_tasks": [
+                        "Extract property-level details (address, year built, square footage, unit mix)",
+                        "Parse rent roll: tenant name, suite, SF, monthly/annual rent, lease start/end, escalations, options",
+                        "Extract asking price, cap rate, and broker assumptions",
+                        "Identify property type and select appropriate underwriting template",
+                        "Extract historical operating statements (T-12, T-3 financials)",
+                        "Parse comparable sales and rental comps from OM"
+                    ],
+                    "outputs": ["Structured rent roll database", "Property data sheet", "Historical operating data"],
+                    "technology_stack": ["Table extraction AI", "CRE-specific NER", "Rent roll parser", "OCR pipeline"]
+                },
+                {
+                    "stage": 2,
+                    "name": "Pro Forma Model Generation",
+                    "description": "Auto-build pro forma cash flow model from extracted data",
+                    "inputs": ["Extracted data from Stage 1", "Market assumptions", "Underwriter's investment criteria"],
+                    "ai_tasks": [
+                        "Build lease-by-lease cash flow projection (5-10 year hold period)",
+                        "Model lease expirations and re-leasing assumptions using market comps",
+                        "Project operating expenses with appropriate growth rates by category",
+                        "Model capital expenditure reserves and tenant improvement allowances",
+                        "Calculate NOI, Cash Flow, and net operating income projections",
+                        "Size debt based on DSCR and LTV constraints",
+                        "Calculate leveraged and unleveraged returns (IRR, equity multiple, cash-on-cash)"
+                    ],
+                    "outputs": ["Complete pro forma model", "Cash flow projections", "Return summary", "Debt sizing analysis"],
+                    "technology_stack": ["Pro forma engine", "Lease modeling system", "Debt sizing calculator", "Return analytics"]
+                },
+                {
+                    "stage": 3,
+                    "name": "Market Comp Analysis & Validation",
+                    "description": "Validate assumptions against market data and comparable transactions",
+                    "inputs": ["Pro forma from Stage 2", "Market data sources"],
+                    "ai_tasks": [
+                        "Pull comparable sales data for the submarket",
+                        "Benchmark rent assumptions against market comps",
+                        "Validate cap rate assumption against recent transactions",
+                        "Compare expense ratios to market benchmarks",
+                        "Flag any assumptions that deviate significantly from market norms",
+                        "Generate comp adjustment analysis"
+                    ],
+                    "outputs": ["Comp analysis report", "Assumption validation scorecard", "Market benchmark comparison"],
+                    "technology_stack": ["Market data aggregation API", "Comp matching engine", "Benchmark database"]
+                },
+                {
+                    "stage": 4,
+                    "name": "Scenario Analysis & Stress Testing",
+                    "description": "Run scenario and sensitivity analyses on the pro forma",
+                    "inputs": ["Validated pro forma from Stages 2-3"],
+                    "ai_tasks": [
+                        "Run base case, bull case, bear case scenarios",
+                        "Build sensitivity tables (IRR vs. exit cap rate vs. rent growth)",
+                        "Stress test for vacancy spike, cap rate expansion, rent decline",
+                        "Model refinancing scenarios at different LTV/rate assumptions",
+                        "Calculate breakeven occupancy and breakeven rent levels",
+                        "Generate scenario comparison dashboard"
+                    ],
+                    "outputs": ["Scenario comparison matrix", "Sensitivity tables", "Stress test results", "Breakeven analysis"],
+                    "technology_stack": ["Scenario engine", "Sensitivity calculator", "Dashboard builder"]
+                },
+                {
+                    "stage": 5,
+                    "name": "Investment Memo Generation",
+                    "description": "Generate investment committee memo from all analyses",
+                    "inputs": ["All outputs from Stages 1-4", "IC memo template"],
+                    "ai_tasks": [
+                        "Generate executive summary with investment thesis",
+                        "Create property overview section with key facts",
+                        "Draft market overview with submarket analysis",
+                        "Summarize financial analysis with key return metrics",
+                        "List key risks and mitigants",
+                        "Create appendices with supporting detail",
+                        "Format to firm's IC memo template"
+                    ],
+                    "outputs": ["Investment Committee Memo (10-25 pages)", "Supporting appendices", "One-page deal summary"],
+                    "technology_stack": ["Report generation AI", "Template engine", "Data visualization"]
+                }
+            ],
+            "human_review_checkpoints": [
+                "Post Stage 1: Validate rent roll extraction accuracy",
+                "Post Stage 2: Review pro forma assumptions and return calculations",
+                "Post Stage 3: Confirm market comp relevance",
+                "Post Stage 5: IC memo sign-off before presentation"
+            ],
+            "kpis": {
+                "time_reduction": "65-80% (from 20-60 hrs to 5-12 hrs)",
+                "accuracy_target": "97%+ rent roll extraction, 99%+ calculation accuracy",
+                "revenue_per_deal": "$500 - $2,000"
+            }
+        },
+        "WF-005": {
+            "source_problem": "PS-020",
+            "workflow_name": "Universal Financial Data Extraction Pipeline",
+            "workflow_type": "Document Ingestion → AI Extraction → Normalization → Output",
+            "trigger": "Financial document uploaded (PDF, scan, filing URL) via API or UI",
+            "estimated_automation_rate": "85-95% of manual data entry tasks",
+            "stages": [
+                {
+                    "stage": 1,
+                    "name": "Document Ingestion & Pre-Processing",
+                    "description": "Accept any financial document format and prepare for extraction",
+                    "inputs": ["Financial document (PDF, scanned image, XBRL, DOCX, Excel)", "Company identifier (optional)"],
+                    "ai_tasks": [
+                        "Detect document type (10-K, 10-Q, annual report, audited financials, management accounts, OM)",
+                        "OCR processing for scanned documents",
+                        "Layout analysis to identify tables, text blocks, headers",
+                        "Language detection for international documents",
+                        "Page segmentation to isolate financial statements from narrative",
+                        "Quality score assessment (readability, completeness)"
+                    ],
+                    "outputs": ["Pre-processed document", "Document type classification", "Quality assessment"],
+                    "technology_stack": ["OCR engine (Tesseract/Cloud Vision)", "Layout analysis model", "Document classifier"]
+                },
+                {
+                    "stage": 2,
+                    "name": "Financial Statement Extraction",
+                    "description": "Extract all financial line items from identified statements",
+                    "inputs": ["Pre-processed document from Stage 1"],
+                    "ai_tasks": [
+                        "Identify and extract Income Statement (revenue, COGS, opex, EBITDA, net income)",
+                        "Identify and extract Balance Sheet (assets, liabilities, equity line items)",
+                        "Identify and extract Cash Flow Statement (operating, investing, financing)",
+                        "Extract footnotes and supplementary schedules",
+                        "Handle multi-period statements (quarterly, annual, YTD)",
+                        "Extract segment-level financial breakdowns",
+                        "Capture currency and unit denominations"
+                    ],
+                    "outputs": ["Raw extracted financial data (JSON/structured)", "Confidence scores per line item"],
+                    "technology_stack": ["Table extraction AI", "Financial NER", "Confidence scoring model"]
+                },
+                {
+                    "stage": 3,
+                    "name": "Normalization & Standardization",
+                    "description": "Normalize extracted data to a standard chart of accounts",
+                    "inputs": ["Raw extracted data from Stage 2", "Standard taxonomy"],
+                    "ai_tasks": [
+                        "Map company-specific line items to standardized taxonomy",
+                        "Handle accounting standard differences (GAAP vs. IFRS)",
+                        "Normalize currency to base currency with historical FX rates",
+                        "Standardize fiscal period alignment",
+                        "Calculate derived metrics (gross margin, EBITDA margin, leverage ratios, etc.)",
+                        "Flag non-recurring items for adjustment",
+                        "Build time-series database across multiple periods"
+                    ],
+                    "outputs": ["Normalized financial dataset", "Standardized chart of accounts mapping", "Calculated financial ratios"],
+                    "technology_stack": ["Taxonomy mapping AI", "GAAP/IFRS normalization rules", "FX rate API", "Ratio calculator"]
+                },
+                {
+                    "stage": 4,
+                    "name": "Validation & Quality Assurance",
+                    "description": "Validate extracted data for accuracy and completeness",
+                    "inputs": ["Normalized data from Stage 3"],
+                    "ai_tasks": [
+                        "Balance sheet balance check (A = L + E)",
+                        "Cash flow reconciliation (beginning + net change = ending cash)",
+                        "Cross-statement consistency checks",
+                        "Outlier detection vs. historical trends",
+                        "Compare against industry benchmarks for reasonableness",
+                        "Flag low-confidence extractions for human review",
+                        "Generate validation report with confidence scores"
+                    ],
+                    "outputs": ["Validated financial dataset", "Validation report", "Items flagged for human review"],
+                    "technology_stack": ["Validation rules engine", "Outlier detection", "Benchmark database"]
+                },
+                {
+                    "stage": 5,
+                    "name": "Output & Distribution",
+                    "description": "Deliver extracted data in requested format",
+                    "inputs": ["Validated data from Stage 4", "Output format preferences"],
+                    "ai_tasks": [
+                        "Generate Excel output with formatted financial model template",
+                        "Provide API response in JSON/XML format",
+                        "Push directly to financial modeling platforms (Excel add-in)",
+                        "Generate comparison tables across multiple companies",
+                        "Create visual charts for key financial metrics",
+                        "Store in historical database for time-series queries"
+                    ],
+                    "outputs": ["Formatted Excel file", "API JSON response", "Financial charts", "Historical database entry"],
+                    "technology_stack": ["Excel generation engine", "REST API", "Chart generator", "Time-series database"]
+                }
+            ],
+            "human_review_checkpoints": [
+                "Stage 4 only: Review items flagged as low-confidence or with validation failures (typically <5% of extractions)"
+            ],
+            "kpis": {
+                "time_reduction": "85-95% (from 2-8 hrs to 10-30 min per statement)",
+                "accuracy_target": "96%+ line item extraction accuracy, 99%+ calculation accuracy",
+                "revenue_per_extraction": "$1-$10 per page, $1K-$10K/month subscription"
+            }
+        }
+    },
+    "platform_architecture_recommendation": {
+        "build_order": [
+            {
+                "phase": 1,
+                "product": "Financial Data Extraction Engine (WF-005)",
+                "timeline": "Months 1-3",
+                "rationale": "Infrastructure layer that powers all other workflows. API-first design allows immediate monetization and partner integration. Fastest to MVP."
+            },
+            {
+                "phase": 2,
+                "product": "CRE Underwriting Accelerator (WF-004)",
+                "timeline": "Months 3-5",
+                "rationale": "Mid-market CRE firms are the most accessible early customers. Clear ROI, shorter sales cycles than IB. Uses extraction engine as foundation."
+            },
+            {
+                "phase": 3,
+                "product": "Project Finance Model Builder (WF-002)",
+                "timeline": "Months 5-9",
+                "rationale": "Greenfield market with no SaaS competitors. Higher complexity but higher contract values. Builds on extraction + modeling capabilities."
+            },
+            {
+                "phase": 4,
+                "product": "CIM Generation Engine (WF-003)",
+                "timeline": "Months 9-12",
+                "rationale": "Requires the most sophisticated content generation. Leverages extraction engine + market research capabilities built in earlier phases."
+            },
+            {
+                "phase": 5,
+                "product": "M&A Due Diligence Pipeline (WF-001)",
+                "timeline": "Months 12-18",
+                "rationale": "Highest value but also highest complexity and longest enterprise sales cycle. Benefits from all previously built capabilities (extraction, legal NLP, report generation)."
+            }
+        ],
+        "shared_infrastructure": [
+            "Document ingestion & OCR pipeline",
+            "Financial data extraction & NER models",
+            "LLM-powered content generation layer",
+            "Brand template & formatting engine",
+            "User authentication & role-based access",
+            "Audit trail & compliance logging"
+        ]
+    }
+}

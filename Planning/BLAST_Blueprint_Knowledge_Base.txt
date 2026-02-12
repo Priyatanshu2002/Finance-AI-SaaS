@@ -1,0 +1,604 @@
+================================================================================
+   FINANCE AI SaaS — B.L.A.S.T. PROTOCOL BLUEPRINT & KNOWLEDGE BASE
+   Generated: 2026-02-12
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: DISCOVERY ANSWERS (The 5 Questions)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. NORTH STAR
+─────────────
+Build a modular Finance AI SaaS platform that automates the most painful manual
+workflows in Investment Banking, M&A, Commercial Real Estate, and Project Finance.
+
+The platform is built as a 5-product suite with a shared infrastructure layer:
+
+  PRODUCT 1 (Phase 1, Months 1-3): Universal Financial Data Extraction Engine
+    - The "plumbing layer" — extracts structured data from any financial document
+    - API-first, powers all other products
+    - TAM: $1.2B | Revenue: $1K-$10K/month API subscriptions
+    - Profitability Score: 9/10
+
+  PRODUCT 2 (Phase 2, Months 3-5): CRE Underwriting Accelerator
+    - Auto-extracts rent rolls, builds pro forma, generates investment memos
+    - TAM: $1.8B | Revenue: $20K-$100K/year per firm
+    - Profitability Score: 9/10
+
+  PRODUCT 3 (Phase 3, Months 5-9): Project Finance Modeling Platform
+    - Automated debt sculpting, multi-currency, scenario analysis
+    - TAM: $800M+ (zero dominant SaaS competitor)
+    - Revenue: $100K-$500K/year enterprise
+    - Profitability Score: 9/10
+
+  PRODUCT 4 (Phase 4, Months 9-12): CIM Generation Engine
+    - End-to-end Confidential Information Memorandum creation
+    - TAM: $2.5B | Revenue: $50K-$200K/year per team
+    - Profitability Score: 9/10
+
+  PRODUCT 5 (Phase 5, Months 12-18): M&A Due Diligence Pipeline
+    - Document intelligence → Risk analysis → Report generation
+    - TAM: $4.1B | Revenue: $250K-$1M/year enterprise
+    - Profitability Score: 10/10
+
+  STRATEGIC INSIGHT: Product 1 (Data Extraction) is the infrastructure layer that
+  powers Products 2-5. Building it first creates a platform advantage where each
+  subsequent product ships faster.
+
+
+2. INTEGRATIONS & EXTERNAL SERVICES
+────────────────────────────────────
+Based on the workflow requirements, the following integrations are needed:
+
+  DOCUMENT PROCESSING:
+  ├── OCR Engine: Google Cloud Vision API / Tesseract (open-source fallback)
+  ├── Layout Analysis: Document AI / LayoutLM
+  ├── Table Extraction: Camelot, Tabula, or MinerU (open-source)
+  ├── PDF Processing: pdfplumber, PyMuPDF, PDF-Extract-Kit
+  └── LLM Integration: Anthropic Claude Opus 4.6 (for content generation)
+
+  FINANCIAL DATA:
+  ├── SEC EDGAR API (free, for public company filings)
+  ├── OpenBB Platform (open-source financial data toolkit)
+  ├── Yahoo Finance API (market data)
+  └── FX Rate API (for multi-currency normalization)
+
+  CLOUD INFRASTRUCTURE:
+  ├── Google Cloud Platform (Cloud Run, Cloud Storage, BigQuery)
+  ├── Supabase or Neon (managed PostgreSQL + Auth)
+  ├── Redis (caching and real-time processing)
+  └── Pinecone or pgvector (vector embeddings for semantic search)
+
+  AUTHENTICATION & SECURITY:
+  ├── Supabase Auth or NextAuth.js (user authentication)
+  ├── Stripe (billing and subscriptions)
+  └── Vault or GCP Secret Manager (secrets management)
+
+  DELIVERY & COLLABORATION:
+  ├── Email (SendGrid/Resend for report delivery)
+  ├── Slack Integration (notifications)
+  └── Google Drive / OneDrive (document export)
+
+  API KEYS NEEDED:
+  - Google Cloud Platform service account
+  - Anthropic API key (Claude Opus 4.6)
+  - Stripe API keys (publishable + secret)
+  - Supabase project URL + anon key + service role key
+  - SendGrid/Resend API key
+  - (Optional) Bloomberg/CapIQ/FactSet for live market data feeds
+
+
+3. SOURCE OF TRUTH (Where Primary Data Lives)
+──────────────────────────────────────────────
+  PRIMARY DATA SOURCES:
+  ├── User-uploaded documents (PDFs, scanned images, DOCX, XLSX)
+  │   → These are the core input: financial statements, rent rolls, OMs,
+  │     term sheets, contracts, 10-K/10-Q filings
+  ├── SEC EDGAR (public filings for US public companies)
+  ├── Virtual Data Room (VDR) crawls for M&A due diligence
+  └── Market data APIs (for comps, benchmarks, FX rates)
+
+  DATA STORAGE ARCHITECTURE:
+  ├── PostgreSQL (primary relational DB for structured data)
+  │   → Users, organizations, projects, extracted financial data,
+  │     normalized line items, audit trails
+  ├── Cloud Storage / S3 (document blob storage)
+  │   → Original uploaded documents, generated reports
+  ├── pgvector / Pinecone (vector store)
+  │   → Document embeddings for semantic search and retrieval
+  ├── Redis (ephemeral cache)
+  │   → Session data, rate limiting, job queues
+  └── .tmp/ (local processing workspace)
+      → OCR intermediates, extraction artifacts, temp files
+
+
+4. DELIVERY PAYLOAD (How/Where Results Are Delivered)
+─────────────────────────────────────────────────────
+  PRIMARY DELIVERY:
+  ├── Web Dashboard (Next.js SaaS application)
+  │   → Real-time project tracking, document management
+  │   → Interactive financial models and scenario analysis
+  │   → Report viewing and annotation
+  ├── API Responses (JSON/XML)
+  │   → For Product 1 (Data Extraction Engine) as API-first product
+  │   → RESTful endpoints for integration with other tools
+  └── Generated Documents
+      → PDF reports (DD reports, investment memos, CIMs)
+      → Excel models (pro forma, financial models)
+      → Word documents (narrative sections)
+
+  SECONDARY DELIVERY:
+  ├── Email notifications (report ready, anomaly detected)
+  ├── Slack notifications (deal alerts, review requests)
+  ├── Google Sheets integration (extracted data export)
+  └── Branded document templates (client/bank format compliance)
+
+
+5. BEHAVIORAL RULES (System "Do Not" Rules & Constraints)
+─────────────────────────────────────────────────────────
+  SECURITY:
+  ├── NEVER store raw API credentials in code or database
+  ├── NEVER transmit financial documents without encryption (TLS in transit, AES-256 at rest)
+  ├── NEVER expose raw financial data in client-side code
+  ├── ALWAYS maintain audit trails for every data access and modification
+  └── ALWAYS enforce role-based access control (RBAC)
+
+  DATA INTEGRITY:
+  ├── NEVER present AI-extracted data as verified without confidence scores
+  ├── ALWAYS flag low-confidence extractions for human review (<95% confidence)
+  ├── NEVER auto-approve financial figures without cross-validation
+  ├── ALWAYS maintain source attribution for every extracted data point
+  └── ALWAYS preserve original documents immutably
+
+  AI BEHAVIOR:
+  ├── NEVER hallucinate financial figures — use only extracted/verified data
+  ├── ALWAYS use deterministic tools for calculations (Python scripts, not LLM)
+  ├── NEVER make investment recommendations or provide financial advice
+  ├── ALWAYS include disclaimers on AI-generated content
+  └── LLMs handle NLP tasks ONLY; business logic is deterministic code
+
+  COMPLIANCE:
+  ├── SOC 2 Type II compliance target
+  ├── GDPR compliance for European clients
+  ├── Data residency requirements per jurisdiction
+  └── Regular security audits and penetration testing
+
+  TONE & COMMUNICATION:
+  ├── Professional, institutional-grade language in all reports
+  ├── Technical precision in financial terminology
+  ├── No casual or ambiguous language in generated documents
+  └── Match industry conventions (IB-speak, CRE terminology, PF jargon)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: DATA SCHEMAS (JSON Shapes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INPUT SCHEMA — Financial Document Upload:
+{
+  "document_id": "uuid",
+  "uploaded_by": "user_id",
+  "organization_id": "org_id",
+  "filename": "string",
+  "file_type": "pdf | docx | xlsx | csv | image",
+  "file_size_bytes": "number",
+  "upload_timestamp": "ISO8601",
+  "document_type": "10-K | 10-Q | annual_report | rent_roll | offering_memorandum | term_sheet | contract | financial_statement | other",
+  "metadata": {
+    "company_name": "string | null",
+    "fiscal_period": "string | null",
+    "currency": "string | null",
+    "language": "string"
+  }
+}
+
+OUTPUT SCHEMA — Extracted Financial Data:
+{
+  "extraction_id": "uuid",
+  "document_id": "uuid",
+  "extraction_timestamp": "ISO8601",
+  "document_type_detected": "string",
+  "quality_score": "number (0-100)",
+  "statements": {
+    "income_statement": {
+      "periods": ["FY2023", "FY2024"],
+      "line_items": [
+        {
+          "label": "Revenue",
+          "standardized_label": "total_revenue",
+          "values": {"FY2023": 1000000, "FY2024": 1200000},
+          "currency": "USD",
+          "confidence": 0.97,
+          "source_page": 45,
+          "source_coordinates": {"x": 100, "y": 200, "w": 300, "h": 20}
+        }
+      ]
+    },
+    "balance_sheet": { "..." },
+    "cash_flow_statement": { "..." }
+  },
+  "calculated_metrics": {
+    "gross_margin": {"FY2023": 0.45, "FY2024": 0.48},
+    "ebitda_margin": {"FY2023": 0.22, "FY2024": 0.25},
+    "current_ratio": {"FY2023": 1.5, "FY2024": 1.8},
+    "debt_to_equity": {"FY2023": 0.6, "FY2024": 0.5}
+  },
+  "validation": {
+    "balance_sheet_balanced": true,
+    "cash_flow_reconciled": true,
+    "cross_statement_consistent": true,
+    "items_flagged_for_review": 3
+  }
+}
+
+OUTPUT SCHEMA — CRE Pro Forma:
+{
+  "property_id": "uuid",
+  "property_type": "multifamily | office | retail | industrial | mixed_use",
+  "property_details": {
+    "address": "string",
+    "year_built": "number",
+    "total_sf": "number",
+    "unit_count": "number"
+  },
+  "rent_roll": [
+    {
+      "tenant": "string",
+      "suite": "string",
+      "sf": "number",
+      "monthly_rent": "number",
+      "annual_rent": "number",
+      "lease_start": "date",
+      "lease_end": "date",
+      "escalation_rate": "number",
+      "options": "string | null"
+    }
+  ],
+  "pro_forma": {
+    "hold_period_years": 5,
+    "annual_projections": [
+      {
+        "year": 1,
+        "gross_potential_rent": "number",
+        "vacancy_loss": "number",
+        "effective_gross_income": "number",
+        "operating_expenses": "number",
+        "net_operating_income": "number",
+        "debt_service": "number",
+        "cash_flow_before_tax": "number"
+      }
+    ]
+  },
+  "returns": {
+    "unleveraged_irr": "number",
+    "leveraged_irr": "number",
+    "equity_multiple": "number",
+    "cash_on_cash_return": "number",
+    "going_in_cap_rate": "number",
+    "exit_cap_rate": "number"
+  }
+}
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: TECHNOLOGY STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FRONTEND:
+├── Framework: Next.js 15 (App Router, React Server Components)
+├── Language: TypeScript
+├── UI Design Tool: Google Stitch (AI-generated UI → React/HTML export)
+├── Styling: Tailwind CSS (Stitch default export) + design system tokens
+├── State Management: Zustand or React Context
+├── Charts/Visualization: Recharts, D3.js
+├── PDF Viewer: react-pdf
+└── Table Components: TanStack Table
+
+BACKEND (API Layer):
+├── Framework: Next.js API Routes (orchestration) + Python FastAPI (AI core)
+├── API Design: RESTful + tRPC for type-safe frontend-backend communication
+├── Job Queue: BullMQ (Redis-backed) for async document processing
+├── WebSocket: Socket.io for real-time progress updates
+└── File Handling: Multer / Formidable for uploads
+
+AI/ML CORE (Python):
+├── LLM: Anthropic Claude Opus 4.6
+├── Document AI: Google Cloud Document AI for layout analysis
+├── OCR: Tesseract / Cloud Vision API
+├── Table Extraction: Camelot, Tabula, MinerU
+├── NLP: spaCy + custom financial NER models
+├── PDF Processing: PyMuPDF, pdfplumber, PDF-Extract-Kit
+├── Financial Libraries: NumPy, Pandas, QuantLib
+├── Embeddings: sentence-transformers for vector search
+└── ML Framework: PyTorch (for custom models)
+
+DATABASE:
+├── Primary: PostgreSQL 16+ (via Supabase or Neon)
+├── Vector Store: pgvector extension
+├── Caching: Redis
+├── Object Storage: Google Cloud Storage
+└── Search: PostgreSQL full-text search + pgvector semantic search
+
+INFRASTRUCTURE:
+├── Hosting: Google Cloud Run (₹26K GCP trial credit covers 3–6 months dev)
+├── CI/CD: GitHub Actions
+├── Containerization: Docker
+├── Monitoring: Sentry + Cloud Monitoring
+├── Logging: Cloud Logging (structured JSON logs)
+└── Secrets: GCP Secret Manager
+
+OPEN-SOURCE TOOLS & LIBRARIES (Research Findings):
+├── FinGPT — Open-source financial LLM (AI4Finance Foundation)
+├── OpenBB Platform — Open-source financial analysis toolkit (100+ data providers)
+├── MinerU — PDF to LLM-ready markdown/JSON (opendatalab)
+├── PDF-Extract-Kit — High-quality PDF content extraction (opendatalab)
+├── microsoft/table-transformer — Deep learning table extraction
+├── parsee-ai/parsee-pdf-reader — Specialized financial table extraction
+├── Cashflows — Python library for investment modeling
+├── Finance Toolkit — Open-source financial analysis
+├── awesome-financial-nlp — Curated NLP resources for finance
+└── QuantLib-Python — Quantitative finance (derivatives, fixed income)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: ARCHITECTURE (A.N.T. 3-Layer System)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+LAYER 1 — ARCHITECTURE (SOPs in architecture/ directory):
+  Standard Operating Procedures define HOW each workflow operates.
+  ├── architecture/extraction_pipeline.md
+  ├── architecture/cre_underwriting.md
+  ├── architecture/project_finance_model.md
+  ├── architecture/cim_generation.md
+  ├── architecture/due_diligence.md
+  └── architecture/error_handling.md
+
+LAYER 2 — NAVIGATION (Decision Making / Orchestration):
+  The AI reasoning layer routes data between SOPs and Tools.
+  ├── Document type detection → route to correct extraction pipeline
+  ├── Confidence scoring → route to human review or auto-approve
+  ├── Workflow stage management → advance through pipeline stages
+  └── Error handling → route to self-annealing repair loop
+
+LAYER 3 — TOOLS (Deterministic Python scripts in tools/ directory):
+  Atomic, testable, deterministic execution units.
+  ├── tools/ocr_extractor.py — OCR and text extraction from documents
+  ├── tools/table_extractor.py — Table detection and data extraction
+  ├── tools/financial_spreader.py — Financial statement normalization
+  ├── tools/rent_roll_parser.py — CRE rent roll extraction
+  ├── tools/pro_forma_builder.py — Pro forma model construction
+  ├── tools/debt_sculpting.py — Project finance debt sculpting engine
+  ├── tools/report_generator.py — PDF/DOCX report generation
+  ├── tools/validation_engine.py — Cross-statement validation checks
+  ├── tools/metric_calculator.py — Financial ratio calculations
+  └── tools/brand_formatter.py — Template-based document formatting
+
+FILE STRUCTURE:
+  Finance AI SaaS/
+  ├── gemini.md                    # Project Constitution (law)
+  ├── .env                         # API keys/secrets
+  ├── architecture/                # Layer 1: SOPs
+  │   ├── extraction_pipeline.md
+  │   ├── cre_underwriting.md
+  │   ├── project_finance_model.md
+  │   ├── cim_generation.md
+  │   └── due_diligence.md
+  ├── tools/                       # Layer 3: Python scripts
+  │   ├── ocr_extractor.py
+  │   ├── table_extractor.py
+  │   ├── financial_spreader.py
+  │   └── ...
+  ├── .tmp/                        # Temporary workbench
+  ├── frontend/                    # Next.js application
+  │   ├── src/
+  │   │   ├── app/                 # App Router pages
+  │   │   ├── components/          # React components
+  │   │   ├── lib/                 # Utilities, API clients
+  │   │   └── styles/              # CSS design system
+  │   └── package.json
+  ├── backend/                     # Python FastAPI service
+  │   ├── api/                     # API endpoints
+  │   ├── services/                # Business logic
+  │   ├── models/                  # Data models
+  │   └── requirements.txt
+  ├── Planning/                    # Planning documents
+  │   ├── automated_workflows.json
+  │   └── finance_domain_problem_statements.json
+  └── docker-compose.yml           # Local development stack
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: 5 AUTOMATED WORKFLOWS (Summary)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WF-005: Universal Financial Data Extraction Pipeline (BUILD FIRST)
+  Trigger: Financial document uploaded via API or UI
+  Stages: Ingestion → AI Extraction → Normalization → Validation → Output
+  Automation Rate: 85-95%
+  KPIs: 96%+ accuracy, 85-95% time reduction, $1K-$10K/month revenue
+
+WF-004: CRE Underwriting Accelerator (BUILD SECOND)
+  Trigger: Offering Memorandum / Rent Roll PDF uploaded
+  Stages: OM Extraction → Pro Forma Build → Market Comp Analysis → Scenarios → Investment Memo
+  Automation Rate: 70-85%
+  KPIs: 97%+ rent roll extraction accuracy, 65-80% time reduction
+
+WF-002: AI Project Finance Model Builder (BUILD THIRD)
+  Trigger: Project term sheet or information memorandum uploaded
+  Stages: Data Extraction → Model Construction → Scenario Analysis → Lender Reporting
+  Automation Rate: 60-75%
+  KPIs: 99%+ calculation accuracy, 50-65% time reduction
+
+WF-003: AI CIM Generation Engine (BUILD FOURTH)
+  Trigger: New sell-side mandate engagement letter signed
+  Stages: Data Ingestion → Content Synthesis → Financial Visualization → Brand Formatting → Review
+  Automation Rate: 65-80%
+  KPIs: 98%+ data accuracy, 60-75% time reduction
+
+WF-001: AI-Powered M&A Due Diligence Pipeline (BUILD FIFTH)
+  Trigger: Data room URL/access credentials provided
+  Stages: Ingestion & Classification → Financial Extraction → Legal Analysis → Cross-Reference → DD Report
+  Automation Rate: 70-85%
+  KPIs: 95%+ accuracy, 60-75% time reduction
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: COMPETITIVE LANDSCAPE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KEY COMPETITORS BY PRODUCT:
+
+  DATA EXTRACTION (Product 1):
+  ├── Daloopa — Good but US public companies only
+  ├── Idio (S&P) — Enterprise-only, expensive
+  ├── DocuBridge.ai — Emerging, limited coverage
+  └── OUR MOAT: Private company + any-format + API-first
+
+  CRE UNDERWRITING (Product 2):
+  ├── ARGUS Enterprise — Industry standard but expensive, steep learning curve
+  ├── Buildout (Reonomy) — Property data, limited underwriting
+  ├── CREXi — Marketplace with limited analytics
+  └── OUR MOAT: AI rent-roll extraction + auto pro forma (nobody does both)
+
+  PROJECT FINANCE (Product 3):
+  ├── Mazars — Consulting-based, not SaaS
+  ├── Operis — Excel-based model auditing
+  ├── Synario — Scenario planning, not PF-specific
+  └── OUR MOAT: Greenfield market, zero dominant SaaS player
+
+  CIM GENERATION (Product 4):
+  ├── Deliverables.ai — CIM-only, not end-to-end
+  ├── DealMemo — Outsourced, not AI-native
+  ├── Hebbia — General AI search, not CIM-specific
+  └── OUR MOAT: End-to-end CIM pipeline vs. point solutions
+
+  DUE DILIGENCE (Product 5):
+  ├── Kira Systems (Litera) — Contract review only
+  ├── Datasite — VDR with limited AI
+  ├── Intralinks (SS&C) — VDR-centric
+  ├── Dili (Hebbia) — Search layer, not structured DD workflow
+  └── OUR MOAT: End-to-end DD workflow (not just doc search or VDR)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: REVENUE & MARKET ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  COMBINED TAM: $10.4B+
+
+  MONETIZATION STRATEGY:
+  ├── Product 1: Usage-based API ($1-$10/page) + subscription ($1K-$10K/month)
+  ├── Product 2: Per-deal ($500-$2K) + annual license ($20K-$100K/year)
+  ├── Product 3: Enterprise license ($100K-$500K/year) + per-project ($20K-$50K)
+  ├── Product 4: Per-CIM ($5K-$15K) + annual ($50K-$200K/year)
+  └── Product 5: Per-deal ($25K-$100K) + enterprise ($250K-$1M/year)
+
+  YEAR 1 TARGET (Products 1-2 only):
+  ├── 20 API customers @ $5K/month = $1.2M ARR
+  ├── 10 CRE firms @ $50K/year = $500K ARR
+  └── Total Year 1 target: ~$1.7M ARR
+
+  YEAR 3 TARGET (All 5 products):
+  └── Target: $10M+ ARR
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: WHAT YOU NEED (Checklist for the Founder)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  IMMEDIATE NEEDS:
+  [ ] Google Cloud Platform account + billing enabled
+  [ ] Anthropic API key (Claude Opus 4.6 — primary LLM for extraction & generation)
+  [ ] Supabase project (or Neon) for PostgreSQL database
+  [ ] Stripe account (for billing — can defer to Month 2+)
+  [ ] GitHub repository (private, for code)
+  [ ] Domain name (e.g., financeai.com or similar)
+
+  SAMPLE DOCUMENTS (Critical for Development):
+  [ ] 5-10 sample PDF financial statements (various formats/companies)
+  [ ] 3-5 sample CRE rent rolls (PDF and Excel)
+  [ ] 2-3 sample offering memoranda
+  [ ] 1-2 sample project finance term sheets
+  [ ] 1-2 sample CIM documents
+  (These are needed to train/test the extraction pipeline)
+
+  DESIGN DECISIONS NEEDED:
+  [ ] Brand name and visual identity for the platform
+  [ ] Pricing strategy confirmation (per above recommendations)
+  [ ] Target customer segment for first 5 design partners
+  [ ] Cloud region preference (US, EU, or multi-region)
+
+  OPTIONAL BUT RECOMMENDED:
+  (OpenAI removed — Claude Opus 4.6 is sole LLM)
+  [ ] Bloomberg/CapIQ/FactSet access (for live market data — Phase 2+)
+  [ ] Legal counsel for terms of service / data processing agreements
+  [ ] SOC 2 readiness assessment
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: BUILD TIMELINE & MILESTONES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  COMPRESSED TIMELINE (6 Months — Products 1–3):
+
+  MONTH 1–2: Product 1 — Financial Data Extraction Engine
+  ├── Month 1: Infrastructure setup, OCR pipeline, table extraction, API
+  │   Frontend (Stitch): Auth flow, upload UI, processing status
+  ├── Month 2: Financial NER, normalization, validation, dashboard
+  │   Frontend (Stitch): Extraction results viewer, export flow
+  └── Milestone: Working API + dashboard for 5+ document types
+
+  MONTH 2–4: Product 2 — CRE Underwriting Accelerator
+  ├── Month 2–3: Rent roll parser, pro forma engine
+  │   Frontend (Stitch): CRE underwriting dashboard
+  ├── Month 3–4: Market comps, scenario analysis, investment memo
+  │   Frontend (Stitch): Pro forma viewer, memo preview, export
+  └── Milestone: PDF → pro forma → investment memo, end-to-end
+
+  MONTH 4–6: Product 3 — Project Finance Modeling Platform
+  ├── Month 4–5: Debt sculpting, construction drawdown, multi-currency
+  │   Frontend (Stitch): PF model builder, debt sculpting viz
+  ├── Month 5–6: Monte Carlo, lender reporting, model audit trails
+  │   Frontend (Stitch): Scenario comparison, lender report viewer
+  └── Milestone: Full PF model from term sheet to lender pack
+
+  MONTH 6: Polish + Deployment
+  ├── E2E testing, security audit, performance optimization
+  ├── Deploy to Google Cloud Run (GCP trial credit)
+  ├── CI/CD setup (GitHub Actions)
+  └── Milestone: 3 products live, production-ready
+
+  POST-LAUNCH (Month 7+):
+  ├── Product 4: CIM Generation Engine
+  └── Product 5: M&A Due Diligence Pipeline
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 10: SHARED INFRASTRUCTURE COMPONENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  These components are built once and reused across all 5 products:
+
+  1. Document Ingestion & OCR Pipeline
+     → Accepts any format, runs OCR, detects layout, classifies document type
+  
+  2. Financial Data Extraction & NER Models
+     → Identifies and extracts financial line items from any document
+  
+  3. LLM-Powered Content Generation Layer
+     → Generates narratives, summaries, reports using structured data
+  
+  4. Brand Template & Formatting Engine
+     → Applies client/bank branding to all generated documents
+  
+  5. User Authentication & Role-Based Access
+     → Multi-tenant architecture with organization-level permissions
+  
+  6. Audit Trail & Compliance Logging
+     → Every action logged for SOC 2 / regulatory compliance
+
+
+================================================================================
+   END OF BLUEPRINT — This document is the knowledge base for the
+   Finance AI SaaS project built under the B.L.A.S.T. protocol.
+================================================================================

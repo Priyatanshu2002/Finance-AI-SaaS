@@ -1,0 +1,1321 @@
+================================================================================
+  FINANCE DOMAIN — CRITICAL MANUAL WORKFLOW PROBLEM STATEMENTS
+  Comprehensive Research for AI SaaS Product Ideation
+================================================================================
+
+Version:        1.0.0
+Generated:      2026-02-11
+Domains:        Investment Banking, Transaction Advisory (M&A), Real Estate
+                Finance, Project Finance & Infrastructure, Regulatory
+                Compliance & KYC/AML
+
+Data Sources:
+  • Deloitte Investment Banking Reports
+  • McKinsey Financial Services Insights
+  • PitchBook Industry Analysis
+  • Forbes FinTech Coverage
+  • KPMG AI in Financial Services
+  • Reddit r/financialcareers & r/investmentbanking
+  • Mergers & Inquisitions Blog
+  • Wall Street Prep
+  • Corporate Finance Institute
+  • Apify Finance Actors Marketplace
+  • Commercial Observer Real Estate
+  • Banyan Infrastructure Reports
+
+
+================================================================================
+                         PROBLEM STATEMENTS (20 Total)
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-001 | Investment Banking — Deal Execution
+  Sub-Domain: CIM / Offering Memorandum Creation
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Manual CIM (Confidential Information Memorandum) Creation is Extremely
+  Time-Intensive
+
+PROBLEM DESCRIPTION:
+  Creating a CIM involves weeks of manual data gathering, copy-pasting from
+  multiple sources, formatting, financial summarization, and iterative
+  revisions. Junior analysts spend 60-70% of their time on mechanical tasks
+  like data entry and formatting rather than strategic work. A single CIM can
+  take 2-6 weeks to finalize and 10-40 hours of manual review/validation alone.
+
+WHO SUFFERS:
+  • IB Analysts
+  • IB Associates
+  • Managing Directors
+  • Sell-side Advisory Teams
+
+CURRENT WORKFLOW:
+  1. Gather data from client materials, public filings, management presentations
+  2. Copy-paste information across Word, Excel, PowerPoint
+  3. Build financial summaries and projections manually in Excel
+  4. Conduct market and competitor research manually
+  5. Draft executive summary and investment highlights
+  6. Format document to bank's brand standards
+  7. Multiple rounds of review and revision (10-40 hours)
+  8. Organize visual assets (logos, charts, product images)
+
+PAIN INTENSITY:        Critical
+TIME WASTED:           80-240 hours per CIM across the team
+FREQUENCY:             Multiple CIMs per active deal, dozens per year per team
+MARKET SIZE SIGNAL:    $2.5B+ addressable market in IB workflow automation
+
+EXISTING COMPETITORS:
+  • Deliverables.ai — Gap: Limited to CIM generation, not end-to-end deal workflow
+  • DealMemo — Gap: Focused on outsourced CIM creation, not AI-native
+  • Hebbia — Gap: General AI search, not CIM-specific
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered CIM generation engine that ingests client data rooms, public
+    filings, and market data to auto-generate first drafts with brand-compliant
+    formatting
+
+  Key Features:
+    • Auto-extraction from data rooms
+    • Financial spreading automation
+    • Market analysis synthesis
+    • Brand template compliance
+    • Version tracking and collaboration
+
+  Monetization:
+    Per-deal pricing ($5K-$15K per CIM) or annual license ($50K-$200K per team)
+
+  Profitability Score: 9/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-002 | Investment Banking — Deal Execution
+  Sub-Domain: Pitchbook & Presentation Creation
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Pitchbook Creation Consumes Disproportionate Analyst Hours on Formatting
+
+PROBLEM DESCRIPTION:
+  Creating and formatting pitchbooks involves manually updating charts with
+  latest market data, ensuring consistent fonts/colors/branding, and pulling
+  data points from multiple terminals (Bloomberg, CapIQ, FactSet). Banks like
+  Goldman Sachs and Barclays have tried internal automation but it remains
+  largely manual. Analysts spend 6-8 hours daily in Excel/PowerPoint doing
+  this work.
+
+WHO SUFFERS:
+  • IB Analysts (1st and 2nd year)
+  • IB Associates
+  • Graphics/Presentation Teams
+
+CURRENT WORKFLOW:
+  1. Pull market data from Bloomberg/CapIQ/FactSet terminals
+  2. Build/update comparable company tables manually
+  3. Create charts and visualizations in Excel then paste into PowerPoint
+  4. Apply bank's brand formatting standards
+  5. Update with latest trading data before every meeting
+  6. Multiple revision cycles with senior bankers
+
+PAIN INTENSITY:        High
+TIME WASTED:           20-60 hours per pitchbook
+FREQUENCY:             5-15 pitchbooks per month per team
+MARKET SIZE SIGNAL:    $1.8B market in financial presentation automation
+
+EXISTING COMPETITORS:
+  • Temenos (formerly Pigment) — Gap: Generic financial planning, not IB-specific
+  • Palantir AIP — Gap: Enterprise-focused, expensive, not IB pitch workflow
+  • Tome / Beautiful.ai — Gap: General presentation AI, lack financial data integration
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI pitchbook engine with live data feeds from Bloomberg/CapIQ that
+    auto-generates bank-branded presentations with real-time comp tables and
+    market charts
+
+  Key Features:
+    • Live data feed integration
+    • Auto-comp table generation
+    • Brand template engine
+    • One-click data refresh
+    • Senior banker markup workflow
+
+  Monetization:
+    Seat-based SaaS ($500-$2,000/user/month)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-003 | Investment Banking — Deal Origination
+  Sub-Domain: Deal Sourcing & Target Screening
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Deal Sourcing Relies on Fragmented Manual Research Across Disconnected Systems
+
+PROBLEM DESCRIPTION:
+  Bankers manually scan news, filings, industry reports, and their personal
+  networks to identify M&A targets. There is no 'single source of truth' for
+  relationship data — information is scattered across spreadsheets, CRMs,
+  emails, and handwritten notes. Critical relationship context is lost when
+  personnel leave the firm.
+
+WHO SUFFERS:
+  • Managing Directors
+  • Vice Presidents
+  • Business Development Teams
+
+CURRENT WORKFLOW:
+  1. Monitor news and industry publications manually
+  2. Search CapIQ/PitchBook databases with manual filters
+  3. Cross-reference personal contact lists and CRM entries
+  4. Build target lists in Excel spreadsheets
+  5. Track outreach status in email and notes
+  6. Manually update pipeline progress
+
+PAIN INTENSITY:        High
+TIME WASTED:           Ongoing — 10-20 hours/week per senior banker
+FREQUENCY:             Continuous
+MARKET SIZE SIGNAL:    $3.2B deal intelligence and relationship management market
+
+EXISTING COMPETITORS:
+  • 4Degrees — Gap: Relationship intelligence but limited AI-driven target matching
+  • Grata — Gap: Good for private company data but not full workflow
+  • DealCloud (Intapp) — Gap: CRM-heavy, limited AI-powered sourcing
+  • MergerLinks — Gap: Transaction pipeline focus, limited relationship context
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered deal origination platform that continuously scans market signals,
+    maps relationship networks, and proactively surfaces actionable deal
+    opportunities
+
+  Key Features:
+    • NLP market signal detection
+    • Relationship graph mapping
+    • Proactive target recommendations
+    • Automated outreach tracking
+    • Deal pipeline analytics
+
+  Monetization:
+    Team license ($100K-$500K/year)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-004 | Transaction Advisory — M&A
+  Sub-Domain: Due Diligence
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Financial & Legal Due Diligence is Overwhelmingly Manual Document Review
+
+PROBLEM DESCRIPTION:
+  Due diligence requires reviewing thousands of documents (contracts, financial
+  statements, legal filings, employee records) in virtual data rooms. Analysts
+  manually extract key terms, flag risks, cross-reference data, and compile
+  findings into reports. A single M&A deal may involve 10,000-50,000 documents
+  taking weeks of manual review.
+
+WHO SUFFERS:
+  • Transaction Advisory Teams
+  • Legal Counsel
+  • Buy-side Analysts
+  • Accounting/Audit Teams
+
+CURRENT WORKFLOW:
+  1. Upload/organize documents in Virtual Data Room (VDR)
+  2. Manually read and categorize thousands of documents
+  3. Extract key clauses and financial data points by hand
+  4. Cross-reference findings across document types
+  5. Flag risks, anomalies, and potential liabilities manually
+  6. Compile findings into due diligence reports
+  7. Iterate with legal and financial teams
+
+PAIN INTENSITY:        Critical
+TIME WASTED:           500-2,000+ person-hours per deal
+FREQUENCY:             Per M&A transaction (thousands globally per year)
+MARKET SIZE SIGNAL:    $4.1B due diligence automation market by 2027
+
+EXISTING COMPETITORS:
+  • Kira Systems (Litera) — Gap: Contract review only, not full financial DD
+  • Datasite — Gap: VDR with some AI, but still requires heavy manual review
+  • Intralinks (SS&C) — Gap: VDR-centric, limited AI extraction
+  • Dili (by Hebbia) — Gap: AI search layer but not structured DD workflow
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    End-to-end AI due diligence platform that auto-ingests data rooms, extracts
+    key findings, flags risks, and generates structured DD reports with audit
+    trails
+
+  Key Features:
+    • Intelligent document classification
+    • Auto-extraction of key terms and financials
+    • Risk scoring and anomaly detection
+    • Structured report generation
+    • Audit trail and compliance logging
+
+  Monetization:
+    Per-deal pricing ($25K-$100K) or enterprise license ($250K-$1M/year)
+
+  Profitability Score: 10/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-005 | Investment Banking — Financial Analysis
+  Sub-Domain: Financial Modeling
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Financial Models in Excel are Error-Prone, Unstandardized, and Maintenance-Heavy
+
+PROBLEM DESCRIPTION:
+  94% of business spreadsheets contain critical errors. IB analysts spend 6-8
+  hours daily in Excel, with a significant portion on model maintenance
+  (updating data, fixing formulas, reformatting) rather than analysis. Models
+  grow to 100MB+ with broken links, hardcoded values, and inconsistent
+  formatting. No standardization across teams leads to confusion and audit risk.
+
+WHO SUFFERS:
+  • IB Analysts
+  • Financial Modelers
+  • Valuation Teams
+  • Audit/Compliance
+
+CURRENT WORKFLOW:
+  1. Build DCF/LBO/merger models from scratch or templates
+  2. Manually input financial data from filings and terminals
+  3. Create complex interconnected formulas across 20+ tabs
+  4. Manually update with new quarterly/annual data
+  5. Debug broken links and circular references
+  6. Reformat for different stakeholder audiences
+  7. Version control via 'Save As' filename conventions
+
+PAIN INTENSITY:        High
+TIME WASTED:           40-100 hours per complex model build + ongoing maintenance
+FREQUENCY:             Multiple models per deal, continuous updates
+MARKET SIZE SIGNAL:    $1.5B financial modeling and analytics tools market
+
+EXISTING COMPETITORS:
+  • Visible Alpha — Gap: Consensus estimates, not model building
+  • Modano — Gap: Standardized templates but limited AI
+  • Causal / Fintastic — Gap: Modern modeling interfaces but lack IB depth
+  • DocuBridge.ai — Gap: Data extraction only, not full modeling
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered financial modeling platform that auto-populates from data feeds,
+    validates formulas, standardizes structure, and provides collaborative
+    real-time editing with version control
+
+  Key Features:
+    • Auto-data population from filings/terminals
+    • Formula validation and error detection
+    • Standardized model templates
+    • Real-time collaboration
+    • Scenario analysis engine
+    • Git-like version control
+
+  Monetization:
+    Seat-based ($300-$1,500/user/month)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-006 | Investment Banking — Financial Analysis
+  Sub-Domain: Comparable Company Analysis (Comps)
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Spreading Comps is a Tedious Manual Exercise Despite Available Data Tools
+
+PROBLEM DESCRIPTION:
+  Despite having CapIQ, FactSet, and Bloomberg, banks still require analysts to
+  manually pull, adjust, and format comparable company multiples because of the
+  need for precision, custom adjustments (calendarization, non-recurring items),
+  and firm-specific methodologies. This is one of the most cited 'grunt work'
+  tasks by junior bankers.
+
+WHO SUFFERS:
+  • IB Analysts
+  • Equity Research Associates
+
+CURRENT WORKFLOW:
+  1. Identify peer universe manually from industry knowledge
+  2. Pull raw financial data from CapIQ/FactSet/Bloomberg
+  3. Manually adjust for non-recurring items, accounting differences
+  4. Calendarize financials to common fiscal year end
+  5. Calculate and format trading multiples
+  6. Build output tables in Excel with specific bank formatting
+  7. Update continuously as new data releases
+
+PAIN INTENSITY:        Medium-High
+TIME WASTED:           8-20 hours per comp set
+FREQUENCY:             Multiple times per deal and pitch
+MARKET SIZE SIGNAL:    Part of broader $3B+ financial data analytics market
+
+EXISTING COMPETITORS:
+  • CapIQ Comps Templates — Gap: Raw data, still requires heavy manual adjustment
+  • AlphaSense — Gap: Search/research tool, not comp spreading
+  • Daloopa — Gap: Financial data extraction, partial coverage
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    Intelligent comp engine that auto-identifies peers, pulls/adjusts financials,
+    calendarizes, and outputs bank-formatted comp tables with one click
+
+  Key Features:
+    • AI peer identification
+    • Auto-adjustment engine
+    • Calendarization logic
+    • Bank-formatted output
+    • Real-time updates
+
+  Monetization:
+    Seat-based ($200-$800/user/month)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-007 | Real Estate Finance
+  Sub-Domain: Commercial Real Estate Underwriting
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  CRE Underwriting is Trapped in Complex, Error-Prone Excel Spreadsheets
+
+PROBLEM DESCRIPTION:
+  Commercial real estate underwriting involves building complex pro forma models
+  in Excel with lease-by-lease analysis, expense projections, debt sizing, and
+  return calculations. 88% of spreadsheets contain errors. Underwriters manually
+  input in-place lease data, re-leasing assumptions, expense budgets, and sale
+  assumptions. Each property type (multifamily, office, retail, industrial)
+  requires different model structures.
+
+WHO SUFFERS:
+  • CRE Underwriters
+  • Acquisitions Analysts
+  • Lenders
+  • Equity Investors
+
+CURRENT WORKFLOW:
+  1. Receive offering memorandum and rent roll from broker
+  2. Manually input property details and in-place lease information
+  3. Define re-leasing assumptions, expense projections
+  4. Build pro forma cash flow model in Excel
+  5. Calculate NOI, DSCR, LTV, cap rate, IRR, equity multiple
+  6. Run sensitivity/scenario analysis by manually changing inputs
+  7. Prepare investment committee memo
+  8. Iterate with investment committee feedback
+
+PAIN INTENSITY:        Critical
+TIME WASTED:           20-60 hours per property underwrite
+FREQUENCY:             Firms may underwrite 50-200+ deals to close 5-10 per year
+MARKET SIZE SIGNAL:    $1.8B commercial real estate technology market
+
+EXISTING COMPETITORS:
+  • Buildout (formerly Reonomy) — Gap: Property data, limited underwriting automation
+  • ARGUS Enterprise — Gap: Industry standard but expensive, steep learning curve, Excel-like
+  • CREXi — Gap: Marketplace with some analytics, not deep underwriting
+  • InvestNext — Gap: Fund management, not deal underwriting
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered CRE underwriting platform that auto-extracts rent rolls from
+    OMs/PDFs, builds pro forma models, and generates investment memos with
+    scenario analysis
+
+  Key Features:
+    • PDF/OM rent roll extraction
+    • Auto pro forma generation
+    • Multi-property-type templates
+    • Scenario analysis dashboard
+    • Investment memo generator
+    • Lender criteria matching
+
+  Monetization:
+    Per-deal ($500-$2,000) or annual ($20K-$100K per firm)
+
+  Profitability Score: 9/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-008 | Real Estate Finance
+  Sub-Domain: Property Due Diligence & Document Management
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Real Estate Transaction Documentation is Overwhelmingly Paper-Based and
+  Fragmented
+
+PROBLEM DESCRIPTION:
+  Real estate deals generate massive documentation — contracts, property
+  disclosures, environmental reports, title documents, zoning approvals, loan
+  applications, appraisals. Managing these manually across email, shared drives,
+  and physical files leads to delays, lost documents, and compliance risks.
+  Mortgage approvals alone can be delayed by weeks due to manual document
+  workflows.
+
+WHO SUFFERS:
+  • Real Estate Attorneys
+  • Title Companies
+  • Lenders
+  • Property Managers
+  • Investors
+
+CURRENT WORKFLOW:
+  1. Collect documents from multiple parties (buyer, seller, lender, inspector)
+  2. Organize in shared drives or physical filing systems
+  3. Manually verify document completeness and accuracy
+  4. Track approval status across email threads
+  5. Ensure regulatory compliance across jurisdictions
+  6. Manage version control of contracts through revisions
+
+PAIN INTENSITY:        High
+TIME WASTED:           30-100 hours per transaction
+FREQUENCY:             Per real estate transaction
+MARKET SIZE SIGNAL:    $900M real estate document automation market
+
+EXISTING COMPETITORS:
+  • Dotloop (Zillow) — Gap: Residential transaction management, limited commercial
+  • SkySlope — Gap: Brokerage-focused, not investor/lender workflow
+  • Juniper Square — Gap: Investor relations, not transaction DD
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered real estate transaction management platform with intelligent
+    document classification, completeness checking, and automated compliance
+    verification
+
+  Key Features:
+    • Smart document classification
+    • Completeness tracking dashboard
+    • Multi-party collaboration portal
+    • Compliance auto-checker
+    • E-signature integration
+
+  Monetization:
+    Per-transaction ($200-$1,000) or monthly SaaS ($500-$5,000/month)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-009 | Project Finance & Infrastructure
+  Sub-Domain: Project Finance Modeling
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Project Finance Models are Extremely Complex with Limited Tooling Beyond Excel
+
+PROBLEM DESCRIPTION:
+  Project finance models involve complex debt sculpting, multiple currencies,
+  construction drawdown schedules, concession timelines, and regulatory tariff
+  structures. Excel limitations (circular references for interest, file size,
+  lack of audit trails) make these models fragile and difficult to maintain.
+  Very few specialized tools exist — the industry is underserved compared to
+  corporate finance.
+
+WHO SUFFERS:
+  • Project Finance Bankers
+  • Infrastructure Fund Analysts
+  • Development Finance Institutions
+  • Government PPP Teams
+
+CURRENT WORKFLOW:
+  1. Build bespoke Excel models with 50-100+ tabs
+  2. Manually handle circular references for interest calculations
+  3. Model debt sculpting to match cash flow profiles
+  4. Input construction cost budgets and drawdown schedules
+  5. Model multi-currency exposures and hedging strategies
+  6. Run sensitivity tables manually
+  7. Create lender presentation from model outputs
+  8. Manage model audit and third-party review process
+
+PAIN INTENSITY:        Critical
+TIME WASTED:           200-500+ hours per project model
+FREQUENCY:             Per infrastructure/energy project (billions in global deal flow)
+MARKET SIZE SIGNAL:    $800M+ project finance software market (severely underserved)
+
+EXISTING COMPETITORS:
+  • Mazars Financial Modelling — Gap: Consulting-based, not SaaS product
+  • Operis — Gap: Excel-based model auditing, not a platform
+  • Synario — Gap: Scenario planning, not project finance specific
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    Purpose-built AI project finance modeling platform with automated debt
+    sculpting, multi-currency handling, construction scheduling, and regulatory
+    tariff modeling
+
+  Key Features:
+    • Automated debt sculpting algorithms
+    • Multi-currency cashflow engine
+    • Construction drawdown automation
+    • Regulatory tariff modeling
+    • Model audit trail
+    • Lender reporting
+
+  Monetization:
+    Enterprise license ($100K-$500K/year) or per-project ($20K-$50K)
+
+  Profitability Score: 9/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-010 | Regulatory Compliance
+  Sub-Domain: KYC / KYB / AML
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Know Your Customer/Business Processes are Slow, Manual, and Fraud-Vulnerable
+
+PROBLEM DESCRIPTION:
+  KYC/KYB onboarding involves lengthy manual checks across fragmented data
+  sources — company registries, sanctions lists, PEP databases, and beneficial
+  ownership records. This delays revenue, frustrates partners, and legacy manual
+  approaches cannot detect increasingly sophisticated fraud techniques. A single
+  institutional client onboarding can take 4-8 weeks.
+
+WHO SUFFERS:
+  • Compliance Officers
+  • Onboarding Teams
+  • Relationship Managers
+  • Fund Administrators
+
+CURRENT WORKFLOW:
+  1. Collect identity documents and corporate filings from clients
+  2. Manually check against sanctions lists and PEP databases
+  3. Verify beneficial ownership through manual document review
+  4. Cross-reference across multiple fragmented data sources
+  5. Document findings in compliance case management system
+  6. Escalate suspicious cases for enhanced due diligence
+  7. Perform periodic re-verification (ongoing monitoring)
+
+PAIN INTENSITY:        High
+TIME WASTED:           20-80 hours per complex institutional onboarding
+FREQUENCY:             Per new client/investor relationship + periodic reviews
+MARKET SIZE SIGNAL:    $3.4B KYC/AML compliance technology market
+
+EXISTING COMPETITORS:
+  • Refinitiv World-Check — Gap: Database, not workflow automation
+  • ComplyAdvantage — Gap: AML screening, limited onboarding workflow
+  • Onfido / Jumio — Gap: Identity verification, not full KYB/institutional
+  • Norm AI — Gap: Regulatory chatbot, not end-to-end KYC workflow
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered institutional KYC/KYB platform that automates document
+    verification, beneficial ownership mapping, sanctions screening, and
+    ongoing monitoring
+
+  Key Features:
+    • Automated document verification
+    • AI beneficial ownership mapping
+    • Real-time sanctions/PEP screening
+    • Risk scoring engine
+    • Ongoing monitoring alerts
+    • Regulatory reporting
+
+  Monetization:
+    Per-check pricing + monthly platform fee ($5K-$50K/month)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-011 | Investment Banking — Client Management
+  Sub-Domain: Investor Onboarding & Subscription Documents
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Investor Onboarding is Burdened by Massive Manual Paperwork
+
+PROBLEM DESCRIPTION:
+  Onboarding new investors into funds requires processing lengthy subscription
+  documents, collecting suitability questionnaires, verifying accredited
+  investor status, and managing capital call documentation. This back-office
+  task is tedious, error-prone, and creates bottlenecks during fund closings.
+
+WHO SUFFERS:
+  • Fund Administrators
+  • Private Equity Back Office
+  • Investor Relations Teams
+
+CURRENT WORKFLOW:
+  1. Send subscription documents to prospective investors
+  2. Collect completed forms and supporting documentation
+  3. Manually verify accredited investor status
+  4. Input investor data into fund administration systems
+  5. Process capital calls and distribution notices
+  6. Generate investor statements and K-1 tax documents
+
+PAIN INTENSITY:        Medium-High
+TIME WASTED:           5-15 hours per investor onboarding
+FREQUENCY:             Dozens to hundreds per fund closing
+MARKET SIZE SIGNAL:    $1.2B fund administration technology market
+
+EXISTING COMPETITORS:
+  • Juniper Square — Gap: Good but expensive, limited AI
+  • Passthrough — Gap: Subscription doc automation but narrow scope
+  • Allvue — Gap: Broad fund admin, not specialized onboarding AI
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-driven investor onboarding platform that auto-extracts subscription data,
+    verifies accreditation, and streamlines the entire fund closing workflow
+
+  Key Features:
+    • Smart subscription doc pre-fill
+    • Auto accreditation verification
+    • E-signature workflow
+    • Capital call automation
+    • Investor portal
+
+  Monetization:
+    Per-investor fee ($50-$200) + platform license ($2K-$10K/month)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-012 | Transaction Advisory — M&A
+  Sub-Domain: Valuation Analysis
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Valuation Work Requires Heavy Manual Data Gathering and Subjective Adjustments
+
+PROBLEM DESCRIPTION:
+  Building DCF models, precedent transaction analyses, and LBO models requires
+  manually pulling/cleaning data from multiple sources, making subjective
+  adjustments for non-recurring items, and documenting assumptions. The lack of
+  consensus on adjustments creates inconsistency across analysts and firms.
+
+WHO SUFFERS:
+  • Valuation Teams
+  • IB Analysts
+  • M&A Advisory
+
+CURRENT WORKFLOW:
+  1. Pull historical financial data from SEC filings and data terminals
+  2. Identify and adjust for non-recurring/exceptional items manually
+  3. Build revenue and cost projections based on research
+  4. Construct DCF with manual WACC calculation
+  5. Search for and analyze precedent transactions
+  6. Build LBO model with manual debt scheduling
+  7. Document all assumptions and create sensitivity tables
+  8. Present outputs in formatted valuation summary
+
+PAIN INTENSITY:        High
+TIME WASTED:           40-120 hours per full valuation package
+FREQUENCY:             Per M&A engagement or pitch
+MARKET SIZE SIGNAL:    Part of $2.5B+ IB workflow automation market
+
+EXISTING COMPETITORS:
+  • Duff & Phelps (Kroll) — Gap: Consulting service, not AI SaaS
+  • ValuAdder — Gap: SMB business valuation, not institutional grade
+  • BlueCopa — Gap: FP&A focused, not IB valuation
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI valuation co-pilot that auto-builds DCF/precedent/LBO models from data
+    feeds, suggests adjustments based on industry practices, and generates
+    formatted valuation summaries
+
+  Key Features:
+    • Auto model construction from data feeds
+    • AI-suggested adjustments
+    • Precedent transaction matching
+    • WACC calculator with live inputs
+    • Formatted output generation
+
+  Monetization:
+    Per-engagement ($3K-$10K) or seat-based ($500-$2,000/month)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-013 | Real Estate Finance
+  Sub-Domain: Market Research & Comparable Analysis
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  CRE Market Research and Comp Analysis is Fragmented Across Multiple Paid
+  Databases
+
+PROBLEM DESCRIPTION:
+  Real estate professionals must manually search CoStar, CBRE, JLL, local MLS,
+  and county records to find comparable sales, rental comps, and market trends.
+  Data is inconsistent across sources, requires manual reconciliation, and
+  important local market intelligence often exists only in brokers' heads.
+
+WHO SUFFERS:
+  • Appraisers
+  • CRE Brokers
+  • Acquisitions Teams
+  • Lenders
+
+CURRENT WORKFLOW:
+  1. Search CoStar/CBRE/JLL for market data
+  2. Cross-reference with county tax records and public filings
+  3. Call local brokers for off-market intelligence
+  4. Manually compile comp sets in Excel
+  5. Adjust for differences in location, condition, lease terms
+  6. Create market overview sections for investment memos
+
+PAIN INTENSITY:        Medium-High
+TIME WASTED:           10-30 hours per market analysis
+FREQUENCY:             Per deal and periodic portfolio reviews
+MARKET SIZE SIGNAL:    $2.1B commercial real estate data and analytics market
+
+EXISTING COMPETITORS:
+  • CoStar — Gap: Dominant but expensive ($20K+/year), limited AI analysis
+  • Reonomy — Gap: Property data, limited comp analysis AI
+  • CompStak — Gap: Lease comp data, crowdsourced with gaps
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered CRE market intelligence platform that aggregates data from
+    multiple sources, auto-generates comp analyses, and provides predictive
+    market insights
+
+  Key Features:
+    • Multi-source data aggregation
+    • AI comp matching and adjustment
+    • Predictive rent/vacancy forecasting
+    • Auto market report generation
+    • Local market intelligence capture
+
+  Monetization:
+    Tiered SaaS ($500-$5,000/month based on data access)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-014 | Project Finance & Infrastructure
+  Sub-Domain: ESG & Sustainability Reporting
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  ESG Compliance and Sustainability Reporting for Infrastructure Projects is
+  Largely Manual
+
+PROBLEM DESCRIPTION:
+  Infrastructure/renewable energy projects face growing requirements for ESG
+  reporting, carbon accounting, and sustainability metrics. Data collection
+  across construction sites, equipment sensors, supply chains, and regulatory
+  frameworks is manual and fragmented. DFIs and green bond investors require
+  standardized reporting that is costly to produce.
+
+WHO SUFFERS:
+  • Sustainability Officers
+  • Project Finance Teams
+  • DFIs/MDBs
+  • Green Bond Investors
+
+CURRENT WORKFLOW:
+  1. Collect environmental data from multiple project sites manually
+  2. Calculate carbon footprint using spreadsheet-based methodologies
+  3. Map SDG alignment and impact metrics by hand
+  4. Prepare reports compliant with multiple frameworks (GRI, SASB, TCFD)
+  5. Respond to investor ESG questionnaires individually
+  6. Track and report on green bond use-of-proceeds
+
+PAIN INTENSITY:        Medium-High
+TIME WASTED:           100-300 hours per annual ESG report
+FREQUENCY:             Quarterly/annual per project + ad hoc investor requests
+MARKET SIZE SIGNAL:    $1.6B ESG reporting software market (growing 20%+ YoY)
+
+EXISTING COMPETITORS:
+  • Persefoni — Gap: Carbon accounting focus, limited project finance integration
+  • Measurabl — Gap: Real estate ESG, not infrastructure/project finance
+  • Novisto — Gap: General ESG reporting, not sector-specific
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI ESG reporting platform for infrastructure/project finance that
+    auto-collects data from IoT/sensors, calculates carbon metrics, and
+    generates multi-framework reports
+
+  Key Features:
+    • IoT data integration
+    • Automated carbon accounting
+    • Multi-framework report generation
+    • SDG impact mapping
+    • Green bond tracking
+    • Investor questionnaire auto-fill
+
+  Monetization:
+    Per-project ($10K-$50K/year) or enterprise ($100K-$500K/year)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-015 | Investment Banking — Operations
+  Sub-Domain: Data Room Management
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Virtual Data Room Setup and Management is Tedious and Error-Prone
+
+PROBLEM DESCRIPTION:
+  Setting up virtual data rooms for M&A transactions involves organizing
+  hundreds to thousands of documents into structured folder hierarchies,
+  setting granular access permissions for different buyer groups, and tracking
+  which documents have been viewed. Mistakes in permissions can lead to
+  confidential information leaks.
+
+WHO SUFFERS:
+  • IB Associates/Analysts
+  • Legal Teams
+  • Compliance Officers
+
+CURRENT WORKFLOW:
+  1. Create folder structure according to DD checklist (100+ categories)
+  2. Upload and categorize documents from clients
+  3. Set user permissions for each buyer group
+  4. Index all documents with descriptive naming
+  5. Monitor Q&A workflow between buyers and sellers
+  6. Track document access analytics
+  7. Manage ongoing document additions and updates
+
+PAIN INTENSITY:        Medium
+TIME WASTED:           30-80 hours for initial setup + ongoing management
+FREQUENCY:             Per M&A transaction
+MARKET SIZE SIGNAL:    $2.8B virtual data room market
+
+EXISTING COMPETITORS:
+  • Datasite (formerly Merrill) — Gap: Market leader but limited AI auto-organization
+  • Intralinks (SS&C) — Gap: Strong VDR but manual setup process
+  • Ansarada — Gap: Some AI features but limited auto-categorization
+  • Firmex — Gap: Mid-market VDR, minimal AI
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-first virtual data room that auto-classifies uploaded documents, suggests
+    folder structures, detects permission anomalies, and provides AI-powered Q&A
+    assistance
+
+  Key Features:
+    • Auto document classification and indexing
+    • Smart folder structure suggestions
+    • Permission anomaly detection
+    • AI-powered Q&A engine
+    • Predictive buyer interest analytics
+
+  Monetization:
+    Per-deal ($5K-$25K) or annual enterprise ($50K-$200K/year)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-016 | Real Estate Finance
+  Sub-Domain: Portfolio Asset Management
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Real Estate Portfolio Monitoring Lacks Real-Time Financial Visibility
+
+PROBLEM DESCRIPTION:
+  Property managers and asset managers struggle with real-time visibility across
+  portfolios. Financial data (rent collections, occupancy, expenses, capex) is
+  tracked in disconnected systems — property management software, Excel,
+  accounting systems — making consolidated reporting time-consuming and often
+  outdated by the time it's produced.
+
+WHO SUFFERS:
+  • Asset Managers
+  • Property Managers
+  • Fund Managers
+  • Institutional Investors
+
+CURRENT WORKFLOW:
+  1. Collect data from property management systems (Yardi, MRI, AppFolio)
+  2. Export to Excel for consolidation and analysis
+  3. Manually reconcile across properties and funds
+  4. Build portfolio-level dashboards and reports
+  5. Prepare investor reports (quarterly)
+  6. Track budget vs. actual variances manually
+
+PAIN INTENSITY:        Medium-High
+TIME WASTED:           40-100 hours per quarterly reporting cycle
+FREQUENCY:             Monthly/quarterly
+MARKET SIZE SIGNAL:    $1.5B real estate asset management software market
+
+EXISTING COMPETITORS:
+  • Yardi — Gap: Comprehensive but legacy UI, limited AI analytics
+  • MRI Software — Gap: Strong PMS but reporting requires heavy manual work
+  • Lobby CRE — Gap: Portfolio analytics but limited data integration
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered portfolio intelligence platform that integrates with existing
+    PMS/accounting systems and provides real-time dashboards, anomaly detection,
+    and automated investor reporting
+
+  Key Features:
+    • Multi-PMS integration
+    • Real-time portfolio dashboard
+    • AI anomaly detection
+    • Automated investor report generation
+    • Budget variance alerts
+    • Predictive cash flow forecasting
+
+  Monetization:
+    AUM-based pricing ($2K-$20K/month) or per-property ($50-$200/property/month)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-017 | Transaction Advisory — M&A
+  Sub-Domain: Post-Merger Integration
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Post-Merger Integration Planning is Ad Hoc and Poorly Tracked
+
+PROBLEM DESCRIPTION:
+  After deal close, integration planning typically relies on spreadsheet-based
+  trackers, manual status meetings, and disparate project management tools.
+  Synergy realization tracking is rarely automated, leading to 50-70% of M&A
+  deals failing to achieve targeted synergies. There is no single platform
+  purpose-built for PMI across financial, operational, IT, and cultural
+  workstreams.
+
+WHO SUFFERS:
+  • Integration Management Office
+  • Portfolio Company Management
+  • PE Operating Partners
+
+CURRENT WORKFLOW:
+  1. Create integration playbook in PowerPoint/Word
+  2. Build workstream trackers in Excel/Smartsheet
+  3. Hold weekly status meetings across functional teams
+  4. Manually track synergy targets vs. realization
+  5. Manage cultural integration through surveys and workshops
+  6. Report progress to board/PE sponsors monthly
+
+PAIN INTENSITY:        High
+TIME WASTED:           Thousands of hours across 12-24 month integration
+FREQUENCY:             Per M&A transaction requiring integration
+MARKET SIZE SIGNAL:    $600M+ post-merger integration software market
+
+EXISTING COMPETITORS:
+  • DealRoom — Gap: M&A lifecycle but lightweight PMI tools
+  • Midaxo — Gap: M&A pipeline, limited integration tracking
+  • Generic PMO tools (Monday, Asana) — Gap: Not purpose-built for M&A integration
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI-powered post-merger integration platform with synergy tracking,
+    workstream orchestration, cultural assessment, and predictive integration
+    risk scoring
+
+  Key Features:
+    • Synergy tracking dashboard
+    • Workstream task management
+    • AI cultural fit assessment
+    • Predictive risk alerts
+    • Board reporting automation
+
+  Monetization:
+    Per-deal ($50K-$200K) or enterprise ($100K-$500K/year)
+
+  Profitability Score: 7/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-018 | Project Finance & Infrastructure
+  Sub-Domain: Construction & Development Monitoring
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Construction Loan Monitoring and Draw Management is Manual and Opaque
+
+PROBLEM DESCRIPTION:
+  Lenders in construction/development finance must monitor project progress,
+  verify construction milestones, approve draw requests, and track budget burn.
+  This involves manual site inspections, engineer reports, contractor pay
+  applications, and reconciliation of budgets — all in Excel and email. Fraud
+  and cost overruns are difficult to detect in real time.
+
+WHO SUFFERS:
+  • Construction Lenders
+  • Development Finance Teams
+  • Project Sponsors
+  • Title Companies
+
+CURRENT WORKFLOW:
+  1. Receive contractor draw requests via email/mail
+  2. Coordinate third-party site inspections
+  3. Manually review engineer progress reports
+  4. Reconcile draw amounts against original budget
+  5. Track change orders and budget reallocations in Excel
+  6. Approve draws through manual signing workflow
+  7. Monitor overall project timeline vs. plan
+
+PAIN INTENSITY:        High
+TIME WASTED:           15-40 hours per monthly draw cycle per project
+FREQUENCY:             Monthly per active construction project (12-36 month duration)
+MARKET SIZE SIGNAL:    $500M construction finance technology market
+
+EXISTING COMPETITORS:
+  • Built Technologies — Gap: Draw management but limited AI/predictive analytics
+  • Rabbet — Gap: Budget tracking, limited construction monitoring
+  • Land Gorilla — Gap: Inspection management, narrow scope
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI construction finance platform with automated draw processing, computer
+    vision for progress verification, budget anomaly detection, and predictive
+    cost overrun alerts
+
+  Key Features:
+    • Automated draw processing
+    • CV-based progress verification
+    • Budget anomaly detection
+    • Predictive cost alerts
+    • Digital inspection workflow
+    • Lender dashboard
+
+  Monetization:
+    Per-project ($5K-$20K per project lifecycle) or enterprise ($50K-$200K/year)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-019 | Investment Banking — Compliance
+  Sub-Domain: Regulatory Reporting & Filings
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Regulatory Reporting Across Jurisdictions is Fragmented and Resource-Intensive
+
+PROBLEM DESCRIPTION:
+  Financial institutions must comply with evolving regulations across multiple
+  jurisdictions (SEC, FCA, MAS, ESMA, etc.). Regulatory reporting involves
+  manual data collection, transformation, validation, and submission. The
+  fragmented regulatory landscape means teams often maintain parallel reporting
+  processes for different regulators, leading to duplication and inconsistency.
+
+WHO SUFFERS:
+  • Compliance Teams
+  • Regulatory Affairs
+  • Operations
+  • Legal
+
+CURRENT WORKFLOW:
+  1. Monitor regulatory changes across jurisdictions manually
+  2. Collect required data from multiple internal systems
+  3. Transform data into regulator-specific formats
+  4. Validate reports through manual review and reconciliation
+  5. Submit filings through various regulator portals
+  6. Maintain audit trails and documentation
+  7. Respond to regulatory inquiries and examinations
+
+PAIN INTENSITY:        High
+TIME WASTED:           Ongoing — dedicated teams of 5-20+ FTEs
+FREQUENCY:             Daily/weekly/monthly/quarterly depending on regulation
+MARKET SIZE SIGNAL:    $4.8B regulatory technology (RegTech) market
+
+EXISTING COMPETITORS:
+  • Axiom SL — Gap: Enterprise regulatory reporting, not AI-native
+  • Wolters Kluwer OneSumX — Gap: Comprehensive but complex implementation
+  • Regnology — Gap: Strong in EU, limited global coverage
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    AI regulatory intelligence and reporting platform that monitors regulatory
+    changes, auto-maps data requirements, and generates multi-jurisdiction
+    filings from a single data model
+
+  Key Features:
+    • AI regulatory change monitoring
+    • Auto data mapping engine
+    • Multi-jurisdiction report generation
+    • Validation and reconciliation AI
+    • Audit trail automation
+
+  Monetization:
+    Enterprise SaaS ($100K-$1M/year based on complexity)
+
+  Profitability Score: 8/10
+
+
+────────────────────────────────────────────────────────────────────────────────
+  PS-020 | Cross-Domain
+  Sub-Domain: Financial Data Extraction & Spreading
+────────────────────────────────────────────────────────────────────────────────
+
+PROBLEM TITLE:
+  Extracting and Spreading Financial Data from PDFs/Filings is the Universal
+  Bottleneck
+
+PROBLEM DESCRIPTION:
+  Across all finance sub-domains, extracting structured financial data from
+  unstructured sources (PDF financial statements, 10-K/10-Q filings, annual
+  reports, offering memoranda) is the single most common manual bottleneck.
+  This 'financial spreading' task involves reading documents, identifying line
+  items, inputting into Excel/systems, and normalizing across different
+  reporting formats.
+
+WHO SUFFERS:
+  • Every finance professional who touches financial statements
+
+CURRENT WORKFLOW:
+  1. Receive financial documents in PDF/scanned format
+  2. Manually read and identify relevant financial line items
+  3. Input data into Excel or internal systems by hand
+  4. Normalize data across different company reporting formats
+  5. Verify accuracy through manual cross-checking
+  6. Repeat for each new filing/period
+
+PAIN INTENSITY:        Critical
+TIME WASTED:           2-8 hours per financial statement spread
+FREQUENCY:             Dozens to hundreds of times per analyst per year
+MARKET SIZE SIGNAL:    $1.2B financial data extraction market
+
+EXISTING COMPETITORS:
+  • Daloopa — Gap: Good coverage but limited to US public companies
+  • Idio (S&P) — Gap: Enterprise only, expensive
+  • XBRL/iXBRL feeds — Gap: Only covers structured filings, not private companies
+  • DocuBridge.ai — Gap: Emerging, coverage still building
+
+AI SaaS OPPORTUNITY:
+  Solution Concept:
+    Universal AI financial data extraction engine that reads any financial
+    document (PDF, scan, filing) and outputs structured, normalized financial
+    data ready for modeling
+
+  Key Features:
+    • Multi-format document ingestion (PDF, scan, XBRL)
+    • AI line item recognition
+    • Multi-company normalization
+    • Direct Excel/model population
+    • Private and public company coverage
+    • Historical data building
+
+  Monetization:
+    Usage-based ($1-$10 per page) + API subscription ($1K-$10K/month)
+
+  Profitability Score: 9/10
+
+
+================================================================================
+                           PROFITABILITY RANKING
+================================================================================
+
+  Rank  |  ID      |  Title                              |  Score  |  Rationale
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #1   |  PS-004  |  Due Diligence Automation            |  10/10  |  Massive TAM ($4.1B), extreme pain
+        |          |                                      |         |  (500-2,000+ hrs/deal), high willingness
+        |          |                                      |         |  to pay, current solutions leave major gaps
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #2   |  PS-001  |  CIM Creation Automation             |   9/10  |  Clear ROI (weeks to days), high per-deal
+        |          |                                      |         |  value, direct impact on revenue generation
+        |          |                                      |         |  for IB teams
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #3   |  PS-007  |  CRE Underwriting Automation         |   9/10  |  Underserved market, high deal volume with
+        |          |                                      |         |  low close rate means massive time waste,
+        |          |                                      |         |  clear product-market fit
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #4   |  PS-009  |  Project Finance Modeling Platform   |   9/10  |  Severely underserved market with no real
+        |          |                                      |         |  SaaS competitors, high complexity = high
+        |          |                                      |         |  willingness to pay
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #5   |  PS-020  |  Financial Data Extraction Engine    |   9/10  |  Universal bottleneck across all finance,
+        |          |                                      |         |  high frequency use case, API-first
+        |          |                                      |         |  monetization scales well
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #6   |  PS-002  |  Pitchbook Creation Automation       |   8/10  |  High frequency, clear time savings, but
+        |          |                                      |         |  faces competition from bank internal tools
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #7   |  PS-003  |  Deal Sourcing Intelligence          |   8/10  |  Large TAM but competitive market with
+        |          |                                      |         |  established players
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #8   |  PS-005  |  Financial Modeling Platform          |   8/10  |  Huge market but Excel entrenchment is a
+        |          |                                      |         |  barrier to adoption
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #9   |  PS-010  |  KYC/KYB Automation                  |   8/10  |  Large RegTech market, regulatory
+        |          |                                      |         |  tailwinds, but crowded space
+  ------+----------+-------------------------------------+---------+-------------------------------------------
+   #10  |  PS-018  |  Construction Finance Monitoring     |   8/10  |  Clear pain point with measurable ROI,
+        |          |                                      |         |  niche but growing
+
+
+================================================================================
+                        RECOMMENDED MVP FOCUS
+================================================================================
+
+PRIMARY OPPORTUNITY:
+  PS-009: Project Finance Modeling Platform
+
+RATIONALE:
+  Severely underserved market with no dominant SaaS player. High complexity
+  drives high willingness to pay ($100K-$500K/year). Growing infrastructure
+  investment globally (data centers, renewables, PPPs) creates massive
+  tailwinds. Barriers to entry (domain expertise) create defensibility.
+
+SECONDARY OPPORTUNITIES:
+  • PS-007: CRE Underwriting
+  • PS-020: Financial Data Extraction
+  • PS-004: Due Diligence Automation
+
+GO-TO-MARKET STRATEGY:
+  Start with 5-10 project finance advisory firms as design partners, build for
+  infrastructure/energy vertical first, expand to real estate and broader IB.
+
+
+================================================================================
+                     WEB SCRAPING SOURCES FOR MARKET INTELLIGENCE
+================================================================================
+
+APIFY ACTORS:
+  ┌─────────────────────────────────┬────────────────────────────────────────────┐
+  │  Actor                          │  Use Case                                  │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  Yahoo Finance Scraper          │  Track financial data, market trends,      │
+  │                                 │  company fundamentals                      │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  SEC EDGAR Scraper              │  Extract 10-K, 10-Q filings for financial  │
+  │                                 │  spreading benchmarking                    │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  LinkedIn Job Scraper           │  Track hiring patterns in IB/RE/PF teams   │
+  │                                 │  to validate pain points                   │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  Google News Scraper            │  Monitor FinTech funding announcements     │
+  │                                 │  and competitor moves                      │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  Reddit Scraper                 │  Track discussions in r/financialcareers,  │
+  │                                 │  r/investmentbanking for real-time pain    │
+  │                                 │  points                                    │
+  ├─────────────────────────────────┼────────────────────────────────────────────┤
+  │  Crunchbase Scraper             │  Monitor competitor funding rounds and     │
+  │                                 │  product launches                          │
+  └─────────────────────────────────┴────────────────────────────────────────────┘
+
+DIRECT SCRAPING TARGETS:
+  • https://mergersandinquisitions.com — IB workflow articles and analyst experiences
+  • https://wallstreetprep.com — Financial modeling best practices and pain points
+  • https://breakintocre.com — CRE underwriting workflow descriptions
+  • https://corporatefinanceinstitute.com — Financial analysis methodology and tools
+  • https://projectfinance.net — Project finance modeling practices
+
+
+================================================================================
+                              END OF DOCUMENT
+================================================================================
