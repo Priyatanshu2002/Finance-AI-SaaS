@@ -1,0 +1,13 @@
+{
+    "deals": [
+        {
+            "deal_id": "DL-001",
+            "client_name": "Portfolio Piece (Internal)",
+            "status": "Ingestion",
+            "phase": "1.1",
+            "start_date": "2026-02-15",
+            "next_action": "Upload Input Files",
+            "notes": "Using public data or user-provided sample to build the first showcase CIM."
+        }
+    ]
+}
